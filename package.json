@@ -1,0 +1,35 @@
+{
+  "name": "mugs-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base src --inline --hot",
+    "frontend": "webpack-dev-server --content-base src/frontend --inline --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mobx": "^2.3.7",
+    "mobx-react": "^3.5.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.23.1",
+    "react-addons-test-utils": "^15.3.0",
+    "react-helmet": "^5.0.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
