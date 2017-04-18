@@ -1,4 +1,4 @@
-import reset from "../reset.css";
+import reset from "./reset.css";
 import basicTheme from "../basicTheme.css";
 
 let theme = basicTheme;

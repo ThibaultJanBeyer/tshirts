@@ -1,0 +1,16 @@
+.button {
+  opacity: .5;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 1;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  margin: 10px 0 10px 15px;
+}

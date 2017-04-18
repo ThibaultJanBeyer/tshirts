@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px 0;
+}
+
+.links {
+  color: blue;
+  cursor: pointer;
+  opacity: .5;
+  text-transform: uppercase;
+}
+
+.links:hover {
+  opacity: 1;
+}

@@ -1,14 +1,30 @@
 import React from "react";
 import { 
   Topbar,
-  Logo } from "components";
+  Logo,
+  Searchbar,
+  CartButton
+} from "components";
+
+import styles from "./Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <Topbar />
-      <Logo />
-      Page Header
+    <header role="banner">
+      <section className={styles["section-grey"]}>
+        <div className={styles["section-container"]}>
+          <Topbar />
+        </div>
+      </section>
+      <section className={styles["section-container"]}>
+        <div className={styles.searchArea}>
+          <Logo />
+          <div className={styles.container}>
+            <Searchbar />
+            <CartButton />
+          </div>
+        </div>
+      </section>
     </header>
   );
 };

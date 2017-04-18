@@ -1,20 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Footer = () => {
+import styles from "./Topbar.css";
+
+const Topbar = () => {
   return (
-    <div>
-      <a href="#">Sell your Art</a>
-      <a href="#">Login</a>
+    <div className={styles["outer-container"]}>
+      <div className={styles.container}>
+        <a className={styles.links}>Sell your Art</a>
+        <a className={styles.links}>Login</a>
+      </div>
     </div>
   );
 };
 
-// Footer.defaultProps = {
-//   // myProp: 300
-// };
-
-// Footer.propTypes = {
-//   // PropType Requirement
-// };
-
-export default Footer;
+export default Topbar;

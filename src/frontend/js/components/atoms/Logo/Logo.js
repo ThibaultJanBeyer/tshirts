@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./logo.css";
+import styles from "./Logo.css";
 
 const Logo = ({content, viewBox, png, src, alt}) => {
   if(png) return <img src={src} alt={alt} />;
@@ -26,7 +26,7 @@ Logo.defaultProps = {
 Logo.propTypes = {
   content: PropTypes.element,
   viewBox: PropTypes.string,
-  png: PropTypes.boolean,
+  png: PropTypes.bool,
   src: PropTypes.string,
   alt: PropTypes.string,
 };
