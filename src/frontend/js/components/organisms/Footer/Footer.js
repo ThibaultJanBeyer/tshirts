@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react'
+import React from "react";
 
-const Footer = ({props}) => {
+const Footer = () => {
   return (
     <footer>
       Page Footer
     </footer>
-  )
-}
+  );
+};
 
 // Footer.defaultProps = {
 //   // myProp: 300
@@ -16,4 +16,4 @@ const Footer = ({props}) => {
 //   // PropType Requirement
 // };
 
-export default Footer
+export default Footer;

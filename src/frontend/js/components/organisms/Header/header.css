@@ -1,0 +1,11 @@
+.class-name {
+  color: green;
+}
+
+.header-yo {
+  composes: class-name;
+  /*composes: test from "./test.css";*/
+  background-color: blue;
+  font-size: 20px;
+  padding: 20px;
+}

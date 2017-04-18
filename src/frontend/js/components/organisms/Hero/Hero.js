@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react'
+import React from "react";
 
-const Hero = ({props}) => {
+const Hero = () => {
   return (
     <div>
       Page Hero
     </div>
-  )
-}
+  );
+};
 
 // Hero.defaultProps = {
 //   // myProp: 300
@@ -16,4 +16,4 @@ const Hero = ({props}) => {
 //   // PropType Requirement
 // };
 
-export default Hero
+export default Hero;

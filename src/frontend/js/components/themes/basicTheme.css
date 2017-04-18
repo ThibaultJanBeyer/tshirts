@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Fira+Sans');
+
+body, html, .font-primary {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.color-primary {
+  color: red;
+}
+
+.background-primary {
+  background: red;
+}
+
+.font-primary {
+  font-family: 'Fira Sans', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  /*font-family: 'Crimson Text', serif;*/
+}

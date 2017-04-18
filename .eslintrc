@@ -7,6 +7,10 @@
   "plugins": [
     "react"
   ],
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": "webpack"
+  },
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -26,7 +30,7 @@
     "no-console": 0,
     "no-debugger": 1,
     "no-var": 1,
-    "semi": [1, "always"],
+    "semi": 1,
     "no-trailing-spaces": 0,
     "eol-last": 0,
     "no-unused-vars": 0,
@@ -35,7 +39,7 @@
     "no-lone-blocks": 0,
     "jsx-quotes": 1,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
-    "react/forbid-prop-types": [1, {"forbid": ["any"]}],
+    "react/forbid-prop-types": 0,
     "react/jsx-boolean-value": 1,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-curly-spacing": 1,
@@ -65,5 +69,6 @@
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
     "react/wrap-multilines": 1
+    // "import/no-unresolved": 0
   }
 }

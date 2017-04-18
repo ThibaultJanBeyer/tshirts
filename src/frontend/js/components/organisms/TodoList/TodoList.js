@@ -1,40 +1,55 @@
-import React from "react"
-import { observer } from "mobx-react"
-import store from "store"
+import React from "react";
+import { observer } from "mobx-react";
+import store from "store";
 
 
 @observer
 export default class TodoList extends React.Component {
+  constructor() {
+    super();
+
+    this.toggleComplete = this.toggleComplete.bind(this);
+    this.createNew = this.createNew.bind(this);
+    this.filter = this.filter.bind(this);
+  }
+
   createNew(e) {
     if (e.which === 13) {
-      store.createTodo(e.target.value)
-      e.target.value = ""
+      store.createTodo(e.target.value);
+      e.target.value = "";
     }
   }
 
   filter(e) {
-    store.filter = e.target.value
+    store.filter = e.target.value;
   }
 
-  toggleComplete(todo) {
-    todo.complete = !todo.complete
+  toggleComplete(e) {
+    const id = e.target.getAttribute("data-todoid");
+    store.toggleComplete(id);
   }
 
   render() {
-    const { clearComplete, filter, filteredTodos, todos } = store
+    const { clearComplete, filter, filteredTodos, todos } = store;
 
     const todoLis = filteredTodos.map(todo => (
       <li key={todo.id}>
-       <input type="checkbox" onChange={this.toggleComplete.bind(this, todo)} value={todo.complete} checked={todo.complete} />
+       <input type="checkbox"
+              onChange={this.toggleComplete}
+              value={todo.complete}
+              data-todoid={todo.id}
+              checked={todo.complete} />
        <span>{todo.value}</span>
       </li>
-    ))
-    return <div>
-      <h1>todos</h1>
-      <input className="new" onKeyPress={this.createNew.bind(this)} />
-      <input className="filter" value={filter} onChange={this.filter.bind(this)} />
-      <ul>{todoLis}</ul>
-      <button onClick={clearComplete}>Clear Complete</button>
-    </div>
+    ));
+    return (
+      <div>
+        <h1>todos</h1>
+        <input className="new" onKeyPress={this.createNew} />
+        <input className="filter" value={filter} onChange={this.filter} />
+        <ul>{todoLis}</ul>
+        <button onClick={clearComplete}>Clear Complete</button>
+      </div>
+    );
   }
 }

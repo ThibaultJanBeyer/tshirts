@@ -1,6 +1,7 @@
-var debug = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
+const debug = process.env.NODE_ENV !== "production";
+const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname + "/src",
@@ -8,28 +9,37 @@ module.exports = {
   entry: "./frontend/js/app.js",
   resolve: {
     modules: [
-      path.resolve('./src/frontend/js/'),
-      path.resolve('./node_modules')
+      path.resolve(__dirname + '/src/frontend/js/'),
+      path.resolve(__dirname + '/node_modules')
     ]
   },
-  // alias: {
-  //   Components: path.resolve(__dirname, 'src/frontend/js/components/'),
-  // },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader'
+        use: "babel-loader"
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: {
+            loader: "css-loader",
+            options: { importLoaders: 1, modules: true }
+          }
+        })
+      }
     ]
   },
   output: {
     path: __dirname + "/src/frontend",
     filename: "app.min.js"
   },
-  plugins: debug ? [] : [
+  plugins: debug ? [
+    new ExtractTextPlugin("styles.css")
+  ] : [
+    new ExtractTextPlugin("styles.css"),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),

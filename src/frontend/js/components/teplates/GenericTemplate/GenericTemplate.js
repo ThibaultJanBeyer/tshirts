@@ -1,5 +1,6 @@
-import React, { PropTypes } from "react"
-import { Helmet } from "react-helmet"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
 const GenericTemplate = ({ title, header, hero, children, footer, ...props }) => {
   return (
@@ -12,11 +13,15 @@ const GenericTemplate = ({ title, header, hero, children, footer, ...props }) =>
       {children}
       {footer}
     </div>
-  )
-}
+  );
+};
 
 GenericTemplate.propTypes = {
   children: PropTypes.any.isRequired,
-}
+  footer: PropTypes.element.isRequired,
+  header: PropTypes.element.isRequired,
+  hero: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired
+};
 
 export default GenericTemplate;

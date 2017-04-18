@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 import{
         Footer,
         GenericTemplate,
         Header,
         Hero,
         TodoList
-      } from "components"
+      } from "components";
 
-const HomePage = ({props}) => {
+const HomePage = () => {
   return (
     <GenericTemplate  title="Homepage!"
                       header={<Header />}
@@ -15,7 +15,7 @@ const HomePage = ({props}) => {
                       footer={<Footer />} >
       <TodoList />
     </GenericTemplate>
-  )
+  );
 };
 
 // ComponentName.defaultProps = {
