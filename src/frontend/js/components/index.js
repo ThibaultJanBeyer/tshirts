@@ -3,6 +3,7 @@
 // instead of: import TodoList from "./components/pages/TodoList"
 const req = require.context(".", true, /\.\/[^/]+\/[^/]+\/\w*.js$/);
 
+console.log(req.keys());
 req.keys().forEach((key) => {
   const componentName = key.replace(/^.+\/([^/]+)\.js/, "$1");
   module.exports[componentName] = req(key).default;

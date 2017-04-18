@@ -1,10 +1,13 @@
 import React from "react";
-import styles from "./header.css";
-import { theme } from "components";
+import { 
+  Topbar,
+  Logo } from "components";
 
 const Header = () => {
   return (
-    <header className={`${styles["header-yo"]} ${theme.c.primary}`}>
+    <header>
+      <Topbar />
+      <Logo />
       Page Header
     </header>
   );
