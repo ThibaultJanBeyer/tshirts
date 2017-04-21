@@ -3,17 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      Page Footer
+      <h2>Find us on Facebook</h2>
+      <input type="text"/>
+      <h2>Subscribe for special offers and updates</h2>
+      <input type="text"/>
     </footer>
   );
 };
-
-// Footer.defaultProps = {
-//   // myProp: 300
-// };
-
-// Footer.propTypes = {
-//   // PropType Requirement
-// };
 
 export default Footer;

@@ -1,16 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
+import styles from "./GenericTemplate.css";
 
 const GenericTemplate = ({ title, header, hero, children, footer, ...props }) => {
   return (
-    <div className="application">
+    <div className={styles.app}>
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      {header}
-      {hero}
-      {children}
+      <div className={styles.content}>
+        {header}
+        {hero}
+        {children}
+      </div>
       {footer}
     </div>
   );

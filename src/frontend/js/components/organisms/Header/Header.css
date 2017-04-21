@@ -1,19 +1,42 @@
-.section-container {
+.header__container {
   margin: auto;
   max-width: 960px;
+  width: 100%;
 }
 
-.section-grey {
+.header__topbar {
+  align-items: center;
   background: #F2F2F6;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
-.container {
+.header__searcharea {
+  composes: header__container;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
+  min-height: 75px;
 }
 
-.searchArea {
-  composes: container;
-  margin-bottom: 30px;
+.header__leftcontainer {
+  align-self: flex-start;
+}
+
+.header__rightcontainer {
+  width: 50%;
+}
+
+.searchbar__container {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+}
+
+.cartbutton__container {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10%;
 }

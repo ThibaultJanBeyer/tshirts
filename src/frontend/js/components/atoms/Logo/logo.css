@@ -1,3 +1,10 @@
 .logo {
+  position: relative;
   width: 220px;
+}
+
+.logo-container {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
