@@ -3,14 +3,3 @@
   justify-content: space-between;
   padding: 15px 0;
 }
-
-.topbar__links {
-  color: blue;
-  cursor: pointer;
-  opacity: .5;
-  text-transform: uppercase;
-}
-
-.topbar__links:hover {
-  opacity: 1;
-}

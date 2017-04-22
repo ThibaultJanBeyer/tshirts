@@ -1,0 +1,22 @@
+.footer {
+  background: #303238;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+.footer-container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.subscriptions {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.subscription {
+  margin-bottom: 40px;
+}

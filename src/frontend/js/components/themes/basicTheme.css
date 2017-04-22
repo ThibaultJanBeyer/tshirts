@@ -1,7 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,300');
 
 body, html, .font-primary {
   font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 .color-primary {
@@ -14,6 +32,30 @@ body, html, .font-primary {
 
 .font-primary {
   font-family: 'Fira Sans', sans-serif;
-  /*font-family: 'Roboto', sans-serif;*/
-  /*font-family: 'Crimson Text', serif;*/
+}
+
+.input {
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 5px 0 5px 15px;
+  width: 100%;
+}
+
+.constrain {
+  max-width: 960px;
+  margin: auto;
+}
+
+.link {
+  color: blue;
+  cursor: pointer;
+  opacity: .5;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 1;
 }

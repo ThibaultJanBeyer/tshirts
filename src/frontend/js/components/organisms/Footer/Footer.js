@@ -1,12 +1,22 @@
 import React from "react";
 
+import styles from "./Footer.css";
+import { FooterSocial, FooterMail, FooterMenu } from "components";
+
 const Footer = () => {
   return (
-    <footer>
-      <h2>Find us on Facebook</h2>
-      <input type="text"/>
-      <h2>Subscribe for special offers and updates</h2>
-      <input type="text"/>
+    <footer className={styles["footer"]}>
+      <div className={styles["footer-container"]}>
+        <div className={styles["subscriptions"]}>
+          <div className={styles["subscription"]}>
+            <FooterMail />
+          </div>
+          <div className={styles["subscription"]}>
+            <FooterSocial />
+          </div>
+        </div>
+        <FooterMenu />
+      </div>
     </footer>
   );
 };
