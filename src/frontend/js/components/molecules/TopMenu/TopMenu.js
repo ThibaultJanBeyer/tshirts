@@ -1,18 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./TopMenu.css";
 import { theme } from "components";
 
 const TopMenu = () => {
-  const links = [ "Home", "Newest", "Featured", "Most Popular", "Artists", "Make your own" ];
+  const links = {
+    "Home": "/",
+    "Newest": "/shop?filter=newest",
+    "Featured": "/shop?filter=featured",
+    "Most Popular": "/shop",
+    "Artists": "/artists",
+    "Make your own": "/designer",
+  };
 
-  const linkList = links.map((link, i) => {
-    return (
-      <li key={i} className={styles["list-item"]}>
-        <a href="#" className={theme.link}>{link}</a>
-      </li>
-    );
-  });
+  let linkList = [];
+  for (const name in links) {
+    if (links.hasOwnProperty(name)) {
+      const url = links[name];
+      linkList.push(
+        (
+          <li key={name} className={styles["list-item"]}>
+            <Link to={`${url}`} className={theme.link}>{name}</Link>
+          </li>
+        )
+      );
+    }
+  }
 
   return (
     <ul className={styles["list"]}>
