@@ -3,11 +3,16 @@
   margin: auto;
 }
 
+.input {
+  color: white;
+}
+
 .button {
   background: white;
   border-radius: 0 15px 15px 0;
   box-sizing: border-box;
   height: 100%;
+  line-height: 0;
   padding: 10px;
   position: absolute;
   right: 0;
