@@ -23,11 +23,11 @@ const GenericTemplate = ({ title, header, hero, menu, children, footer, ...props
 
 GenericTemplate.propTypes = {
   children: PropTypes.any.isRequired,
-  footer: PropTypes.element.isRequired,
-  header: PropTypes.element.isRequired,
-  hero: PropTypes.element.isRequired,
-  menu: PropTypes.element.isRequired,
-  title: PropTypes.string.isRequired
+  footer: PropTypes.element,
+  header: PropTypes.element,
+  hero: PropTypes.element,
+  menu: PropTypes.element,
+  title: PropTypes.string
 };
 
 export default GenericTemplate;
