@@ -33,13 +33,13 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/src/frontend",
+    path: __dirname + "/src/frontend/static",
     filename: "app.min.js"
   },
   plugins: debug ? [
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles.min.css")
   ] : [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("styles.min.css"),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),

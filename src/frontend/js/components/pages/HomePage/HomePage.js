@@ -20,12 +20,4 @@ const HomePage = () => {
   );
 };
 
-// ComponentName.defaultProps = {
-//   // myProp: 300
-// };
-
-// ComponentName.propTypes = {
-//   // PropType Requirement
-// };
-
 export default HomePage;

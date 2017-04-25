@@ -8,12 +8,4 @@ const Hero = () => {
   );
 };
 
-// Hero.defaultProps = {
-//   // myProp: 300
-// };
-
-// Hero.propTypes = {
-//   // PropType Requirement
-// };
-
 export default Hero;

@@ -33,12 +33,4 @@ const Header = () => {
   );
 };
 
-// Header.defaultProps = {
-//   // myProp: 300
-// }
-
-// Header.propTypes = {
-//   // PropType Requirement
-// }
-
 export default Header;

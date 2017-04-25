@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import { theme, IconCart } from "components";
 
@@ -12,13 +11,5 @@ const CartButton = () => {
     </button>
   );
 };
-
-// Logo.propTypes = {
-//   content: PropTypes.element,
-//   viewBox: PropTypes.string,
-//   png: PropTypes.boolean,
-//   src: PropTypes.string,
-//   alt: PropTypes.string,
-// };
 
 export default CartButton;
