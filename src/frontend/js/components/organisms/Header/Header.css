@@ -9,7 +9,7 @@
   background: #F2F2F6;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: var(--gutter);
 }
 
 .header__searcharea {

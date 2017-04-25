@@ -1,0 +1,27 @@
+.hero {
+  margin-bottom: var(--gutter);
+}
+
+.hero__main {
+  composes: hero;
+  height: 400px;
+  width: 100%;
+  margin-bottom: var(--gutter-l);
+}
+
+.hero__small {
+  display: inline-block;
+  height: 300px;
+}
+
+.hero__second {
+  composes: hero__small;
+  margin-right: var(--gutter);
+  width: calc(70% - var(--gutter));
+}
+
+.hero__third {
+  composes: hero__small;
+  margin-left: var(--gutter);
+  width: calc(30% - var(--gutter));
+}

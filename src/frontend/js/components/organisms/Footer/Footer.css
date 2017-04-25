@@ -18,5 +18,5 @@
 }
 
 .subscription {
-  margin-bottom: 40px;
+  margin-bottom: var(--gutter-xl);
 }

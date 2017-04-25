@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,300');
 
+:root {
+  --gutter-s: 10px;
+  --gutter: 15px;
+  --gutter-l: 30px;
+  --gutter-xl: 40px;
+}
+
 body, html, .font-primary {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
