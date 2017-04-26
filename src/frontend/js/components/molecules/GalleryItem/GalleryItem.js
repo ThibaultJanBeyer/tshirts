@@ -2,8 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
-import { FlexibleImg, theme } from "components";
 import style from "./GalleryItem.css";
+import { 
+  FlexibleImg,
+  theme
+} from "components";
 
 // see http://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
 const GalleryItem = ({ level, title, designer, designerLink, link, price }) => {

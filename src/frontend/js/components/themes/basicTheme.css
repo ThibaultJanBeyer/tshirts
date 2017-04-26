@@ -31,12 +31,26 @@ h3 {
 }
 
 .color-primary {
-  color: red;
+  color: royalblue;
+}
+
+.background-grey {
+  background: lightgrey;
 }
 
 .background-primary {
-  background: red;
+  background: royalblue;
 }
+
+
+.gradient-grey {
+  background: linear-gradient(to bottom right, lightgrey 0%, darkgray 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(to bottom right, aqua 0%, royalblue 100%);
+}
+
 
 .font-primary {
   font-family: 'Fira Sans', sans-serif;
@@ -57,7 +71,7 @@ h3 {
 }
 
 .link {
-  color: blue;
+  composes: color-primary;
   cursor: pointer;
   opacity: .5;
   text-transform: uppercase;
@@ -66,4 +80,103 @@ h3 {
 
 .link:hover {
   opacity: 1;
+  text-decoration: underline;
+}
+
+.button {
+  composes: color-primary background-grey gradient-grey;
+  border: 0;
+  opacity: .8;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+  outline: 0;
+  padding: 1px;
+  position: relative;
+  transition: box-shadow 150ms ease-in-out,
+              color 200ms ease-in-out,
+              background 200ms ease-in-out;
+}
+
+.button--primary {
+  composes: button background-primary gradient-primary;
+  opacity: 1;
+}
+
+.button__helper {
+  background: white;
+  display: block;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: 5px 10px;
+  position: relative;
+  transition: outline 200ms ease-in-out,
+              padding 200ms ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 1;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover .button__helper,
+.button:focus .button__helper{
+  outline-offset: -2px;
+  outline: 1px solid rgba(0, 0, 0, 0.10);
+  text-decoration: underline;
+}
+
+.button:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.button--loading {
+  animation: loading 2s linear infinite;
+  background: linear-gradient(to right, aqua, royalblue, red, royalblue, aqua);
+  background-size: 300% 100%;
+  box-shadow: 0 0 0 transparent;
+}
+
+.button--loading .button__helper,
+.button--success .button__helper,
+.button--error .button__helper {
+  padding-right: 20px;
+}
+
+.button--loading .button__helper::after {
+  animation: rotateLoader 2s linear infinite;
+  content: "↻";
+  font-size: 0.7rem;
+  line-height: 0;
+  position: absolute;
+  right: 6px;
+  text-align: center;
+  top: 50%;
+}
+
+.button--success {
+  background: springgreen;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.button--success .button__helper::after {
+  color: springgreen;
+  content: "✔";
+  font-size: 0.7rem;
+  line-height: 0;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+}
+
+@keyframes loading {
+  0%   { background-position: 0 100% }
+  100% { background-position: 300% 100% }
+}
+
+@keyframes rotateLoader {
+  0%   { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
 }

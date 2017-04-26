@@ -16,7 +16,8 @@ const HomePage = () => {
                       menu={<MainMenu />}
                       hero={<Hero />}
                       footer={<Footer />} >
-      <Gallery />
+      <Gallery title="Featured" />
+      <Gallery title="Most Popular" />
       <TodoList />
     </GenericTemplate>
   );

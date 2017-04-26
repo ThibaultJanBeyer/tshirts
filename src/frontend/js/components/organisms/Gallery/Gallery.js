@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { 
   GalleryItem,
   theme
@@ -6,10 +8,14 @@ import {
 
 import styles from "./Gallery.css";
 
-const Header = () => {
+const Gallery = ({ title }) => {
+  const titleNode = (title) ? (
+    <h2 className={styles["gallery__title"]}>{title}</h2>
+  ) : null;
+
   return (
-    <div className={`${theme.constrain} ${styles["gallery"]}`}>
-      <h2 className={styles["gallery__title"]}>Featured</h2>
+    <div className={`${theme["constrain"]} ${styles["gallery"]}`}>
+      {titleNode}
       <div className={styles["gallery__container"]}>
         <GalleryItem level={3} />
         <GalleryItem level={3} />
@@ -20,8 +26,17 @@ const Header = () => {
         <GalleryItem level={3} />
         <GalleryItem level={3} />
       </div>
+      <button className={`${theme["button"]}`}>
+        <span className={`${theme["button__helper"]}`}>
+          Load more {title}
+        </span>
+      </button>
     </div>
   );
 };
 
-export default Header;
+Gallery.propTypes = {
+  title: PropTypes.string.isRequired
+};
+
+export default Gallery;
