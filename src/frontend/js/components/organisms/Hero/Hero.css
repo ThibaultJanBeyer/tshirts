@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--gutter-l);
 }
 
 .hero__main {

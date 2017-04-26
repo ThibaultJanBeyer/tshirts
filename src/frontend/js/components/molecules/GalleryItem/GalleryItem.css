@@ -1,0 +1,42 @@
+.galleryitem {
+  margin-bottom: var(--gutter);
+  width: 218px;
+}
+
+.galleryitem__head {
+  margin-bottom: var(--gutter-xs);
+  height: 218px;
+  width: 100%;
+}
+
+.galleryitem__body {
+  margin-bottom: var(--gutter-xs);
+}
+
+.galleryitem__title {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: var(--gutter-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.galleryitem__author {
+  display: inline-block;
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 60%;
+}
+
+.galleryitem__price {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-align: right;
+  vertical-align: top;
+  width: 40%;
+}

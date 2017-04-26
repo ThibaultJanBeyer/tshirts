@@ -21,7 +21,6 @@ const Hero = () => {
           <FlexibleImg source="https://unsplash.it/500/200/?random"/>
         </div>
       </div>
-      <HeaderFeatures />
     </div>
   );
 };

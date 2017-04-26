@@ -12,7 +12,6 @@ const ShopPage = () => {
     <GenericTemplate  title="Homepage!"
                       header={<Header />}
                       menu={<MainMenu />}
-                      hero={<Hero />}
                       footer={<Footer />} >
       <h2> Something </h2>
     </GenericTemplate>

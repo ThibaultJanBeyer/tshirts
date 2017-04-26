@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,300');
 
 :root {
+  --gutter-xs: 5px;
   --gutter-s: 10px;
   --gutter: 15px;
   --gutter-l: 30px;

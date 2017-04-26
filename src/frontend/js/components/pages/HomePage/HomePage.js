@@ -1,6 +1,7 @@
 import React from "react";
 import{
         Footer,
+        Gallery,
         GenericTemplate,
         Header,
         Hero,
@@ -15,6 +16,7 @@ const HomePage = () => {
                       menu={<MainMenu />}
                       hero={<Hero />}
                       footer={<Footer />} >
+      <Gallery />
       <TodoList />
     </GenericTemplate>
   );

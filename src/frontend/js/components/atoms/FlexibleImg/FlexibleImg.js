@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 
 import style from "./FlexibleImg.css";
 
-const FlexibleImg = ({ source, title }) => {
+const FlexibleImg = ({ source, altText }) => {
   return (
     <div className={style["flexibleimg"]}>
-      <img src={source} alt={title} className={style["flexibleimg__img"]}/>
+      <img src={source} alt={altText} className={style["flexibleimg__img"]}/>
     </div>
   );
 };
@@ -23,7 +23,7 @@ FlexibleImg.defaultProps = {
 
 FlexibleImg.propTypes = {
   source: PropTypes.string,
-  title: PropTypes.string
+  altText: PropTypes.string
 };
 
 export default FlexibleImg;
