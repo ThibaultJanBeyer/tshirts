@@ -10,6 +10,7 @@
 }
 
 .gallery__item {
-  margin-bottom: var(--gutter-l);
-  width: 200px;
+  height: 260px;
+  margin-bottom: var(--gutter);
+  width: 218px;
 }

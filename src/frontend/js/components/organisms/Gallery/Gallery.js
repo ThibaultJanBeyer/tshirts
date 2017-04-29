@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { 
+  Button,
   GalleryItem,
   theme
 } from "components";
@@ -17,20 +18,32 @@ const Gallery = ({ title }) => {
     <div className={`${theme["constrain"]} ${styles["gallery"]}`}>
       {titleNode}
       <div className={styles["gallery__container"]}>
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
-        <GalleryItem level={3} />
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
+        <div className={styles["gallery__item"]}>
+          <GalleryItem level={3} />
+        </div>
       </div>
-      <button className={`${theme["button"]}`}>
-        <span className={`${theme["button__helper"]}`}>
-          Load more {title}
-        </span>
-      </button>
+      <Button content={`Load more ${title}`} primary="true" />
     </div>
   );
 };
