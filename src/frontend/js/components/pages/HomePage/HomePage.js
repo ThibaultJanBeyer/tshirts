@@ -1,23 +1,35 @@
 import React from "react";
+
 import{
-        Footer,
-        Gallery,
-        GenericTemplate,
-        Header,
-        Hero,
-        MainMenu,
-        TodoList
-      } from "components";
+  Footer,
+  Gallery,
+  GenericTemplate,
+  FeaturedArtists,
+  Header,
+  Hero,
+  MainMenu,
+  TodoList,
+  theme
+} from "components";
 
 const HomePage = () => {
   return (
     <GenericTemplate  title="Homepage!"
                       header={<Header />}
                       menu={<MainMenu />}
-                      hero={<Hero />}
                       footer={<Footer />} >
-      <Gallery title="Featured" />
-      <Gallery title="Most Popular" />
+      <div className={theme["gutter"]}>
+        <Hero />
+      </div>
+      <div className={theme["gutter"]}>
+        <Gallery title="Featured" />
+      </div>
+      <div className={theme["gutter"]}>
+        <FeaturedArtists />
+      </div>
+      <div className={theme["gutter"]}>
+        <Gallery title="Most Popular" />
+      </div>
       <TodoList />
     </GenericTemplate>
   );

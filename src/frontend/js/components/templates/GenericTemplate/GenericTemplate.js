@@ -13,7 +13,6 @@ const GenericTemplate = ({ title, header, hero, menu, children, footer, ...props
       <div className={styles.content}>
         {header}
         {menu}
-        {hero}
         {children}
       </div>
       {footer}
@@ -23,10 +22,9 @@ const GenericTemplate = ({ title, header, hero, menu, children, footer, ...props
 
 GenericTemplate.propTypes = {
   children: PropTypes.any.isRequired,
-  footer: PropTypes.element,
-  header: PropTypes.element,
-  hero: PropTypes.element,
-  menu: PropTypes.element,
+  footer: PropTypes.object,
+  header: PropTypes.object,
+  menu: PropTypes.object,
   title: PropTypes.string
 };
 

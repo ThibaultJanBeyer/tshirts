@@ -1,23 +1,17 @@
 .galleryitem {
-  margin-bottom: var(--gutter);
-  width: 218px;
-}
-
-.galleryitem__head {
-  margin-bottom: var(--gutter-xs);
-  height: 218px;
+  height: 100%;
   width: 100%;
 }
 
-.galleryitem__body {
+.galleryitem__head {
+  height: 80%;
   margin-bottom: var(--gutter-xs);
+  width: 100%;
 }
 
 .galleryitem__title {
   display: block;
-  font-size: 1rem;
   font-weight: normal;
-  margin-bottom: var(--gutter-xs);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
