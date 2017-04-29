@@ -41,7 +41,7 @@ const ArtistCard = ({ user }) => {
         </div>
         <div className={styles["artistcard__item"]}>
           <button className={`${styles["artistcard__item"]} ${styles["artistcard__item--more"]}`}>
-            See more designs from <span className={`${help["nowrap"]}`}>{user.name}</span>
+            More from <span className={`${help["nowrap"]}`}>{user.name}</span>
           </button>
         </div>
       </div>

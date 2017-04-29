@@ -5,7 +5,7 @@
 
 .artistcard__head {
   cursor: pointer;
-  height: calc(25% - var(--gutter-s));
+  height: 25%;
   margin-bottom: var(--gutter-s);
   overflow: hidden;
   position: relative;
@@ -48,7 +48,7 @@
   align-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  height: 75%;
+  height: calc(75% - var(--gutter-s));
   justify-content: space-between;
 }
 

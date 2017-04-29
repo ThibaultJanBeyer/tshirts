@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 import styles from "./GenericTemplate.css";
 
-const GenericTemplate = ({ title, header, hero, menu, children, footer, ...props }) => {
+const GenericTemplate = ({ title, header, menu, children, footer, ...props }) => {
   return (
     <div className={styles.app}>
       <Helmet>

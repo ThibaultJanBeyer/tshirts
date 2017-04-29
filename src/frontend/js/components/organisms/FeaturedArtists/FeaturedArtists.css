@@ -24,7 +24,8 @@
   overflow-y: hidden;
   white-space: nowrap;
   width: 100%;
-	
+
+  padding-bottom: var(--gutter);
 }
 
 .featuredartists__card {
