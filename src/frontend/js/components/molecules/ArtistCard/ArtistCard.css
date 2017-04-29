@@ -1,0 +1,65 @@
+.artistcard {
+  height: 100%;
+  width: 100%;
+}
+
+.artistcard__head {
+  cursor: pointer;
+  height: calc(25% - var(--gutter-s));
+  margin-bottom: var(--gutter-s);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.artistcard__head:hover .artistcard__head-content,
+.artistcard__head:focus .artistcard__head-content {
+  box-shadow: inset 0 -30px 70px black;
+  transform: scale(1.05, 1.05);
+}
+
+.artistcard__head-content {
+  box-shadow: inset 0 -40px 90px black;
+  color: white;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: box-shadow 250ms ease-in-out,
+              transform 250ms ease-in-out;
+  width: 100%;
+}
+
+.artistcard__info {
+  font-size: 0.7rem;
+}
+
+.artistcard__avatar {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  border: 5px solid white;
+  margin: var(--gutter-s) auto var(--gutter-xs) auto;
+}
+
+.artistcard__body {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  height: 75%;
+  justify-content: space-between;
+}
+
+.artistcard__item {
+  height: 48.75%;
+  width: 48.25%;
+}
+
+.artistcard__item--more {
+  background: var(--color-subtlegrey);
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+}

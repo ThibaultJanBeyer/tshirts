@@ -9,7 +9,15 @@ import {
 } from "components";
 
 // see http://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
-const GalleryItem = ({ level, title, designer, designerLink, link, price }) => {
+const GalleryItem = ({ 
+  designer,
+  designerLink,
+  level,
+  link,
+  price,
+  title
+}) => {
+
   let heading;
   if(level === 1) {
     heading = (
@@ -35,13 +43,23 @@ const GalleryItem = ({ level, title, designer, designerLink, link, price }) => {
         </Link>
       </h3>
     );
+  } else if(level === 4) {
+    heading = (
+      <h4 className={style["galleryitem__title"]}>
+        <Link to={link} className={theme.link}>
+          {title}
+        </Link>
+      </h4>
+    );
   }
 
   return (
-    <div className={style["galleryitem"]} role="search">
+    <div  className={style["galleryitem"]}>
+
       <div className={style["galleryitem__head"]}>
         <FlexibleImg />
       </div>
+
       <div className={style["galleryitem__body"]}>
         {heading}
         <div>
@@ -55,21 +73,22 @@ const GalleryItem = ({ level, title, designer, designerLink, link, price }) => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
 
 GalleryItem.defaultProps = {
-  level: 2,
-  title: "Lorem Ipsum",
   designer: "thibault-jan-beyer",
   designerLink: "/shop",
+  level: 2,
   link: "/shop",
   price: `${
           Math.floor(Math.random() * 9999)
           },${
           Math.floor(Math.random() * 99)
-          }€`
+          }€`,
+  title: "Lorem Ipsum"
 };
 
 GalleryItem.propTypes = {
