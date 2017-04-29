@@ -58,8 +58,20 @@
 }
 
 .artistcard__item--more {
-  background: var(--color-subtlegrey);
-  height: 100%;
+  background-color: var(--color-subtlegrey);
+  border: 1px solid transparent;
+  color: rgba(var(--color-primary-rgbval), 0.5);
+  cursor: pointer;
+  font-size: 4rem;
+  height: 80%;
   padding: 10px;
   width: 100%;
+  transition: color 200ms ease-in-out,
+              border-color 200ms ease-in-out;
+}
+
+.artistcard__item--more:hover,
+.artistcard__item--more:focus {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }

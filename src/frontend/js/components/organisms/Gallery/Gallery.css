@@ -1,6 +1,6 @@
 .gallery__title {
   text-align: center;
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--gutter-s);
 }
 
 .gallery__container {

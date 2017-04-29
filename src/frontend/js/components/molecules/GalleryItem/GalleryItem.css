@@ -4,9 +4,14 @@
 }
 
 .galleryitem__head {
+  cursor: pointer;
   height: 80%;
   margin-bottom: var(--gutter-xs);
   width: 100%;
+}
+
+.galleryitem__head:hover img {
+  transform: scale(1.05, 1.05)
 }
 
 .galleryitem__title {

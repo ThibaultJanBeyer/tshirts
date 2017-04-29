@@ -1,5 +1,6 @@
 .featuredartists__title {
   text-align: center;
+  margin-bottom: var(--gutter-s);
 }
 
 .featuredartists__container {
@@ -31,7 +32,7 @@
 .featuredartists__card {
   display: inline-block;
   height: 520px;
-  margin-right: var(--gutter);
+  margin-right: var(--gutter-xl);
   white-space: normal;
   width: 340px;
 }
