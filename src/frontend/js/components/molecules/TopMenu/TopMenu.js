@@ -9,9 +9,10 @@ const TopMenu = () => {
     "Home": "/",
     "Newest": "/shop?filter=newest",
     "Featured": "/shop?filter=featured",
-    "Most Popular": "/shop",
+    "Most Popular": "/shop?filter=popular",
     "Artists": "/artists",
     "Make your own": "/designer",
+    "Item": "/shop/alfredo/something"
   };
 
   let linkList = [];
