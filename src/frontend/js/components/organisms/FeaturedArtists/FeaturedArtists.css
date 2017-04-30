@@ -6,16 +6,16 @@
 .featuredartists__container {
 	background:
 		/* Shadow covers */
-		linear-gradient(to left, white 100%, rgba(255,255,255,0)),
-		linear-gradient(to right, rgba(255,255,255,0), white 100%) 0 100%,
+		linear-gradient(to left, var(--color-white) 100%, transparent),
+		linear-gradient(to right, transparent, var(--color-white) 100%) 0 100%,
 		
 		/* Shadows */
-		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.3), transparent),
+		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.3), transparent) 0 100%;
 
   background-position: left center, right center, -5% 50%, 105% 50%;
 	background-repeat: no-repeat;
-	background-color: white;
+	background-color: var(--color-white);
 	background-size: 20px 100%, 20px 100%, 6% 100%, 6% 100%;
 
 	/* Opera doesn't support this in the shorthand */

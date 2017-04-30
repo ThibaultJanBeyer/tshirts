@@ -4,11 +4,11 @@
 }
 
 .input {
-  color: white;
+  color: var(--color-white);
 }
 
 .button {
-  background: white;
+  background: var(--color-white);
   border-radius: 0 15px 15px 0;
   box-sizing: border-box;
   height: 100%;

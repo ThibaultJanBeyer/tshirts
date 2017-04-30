@@ -25,11 +25,11 @@
 }
 
 ._3eVcVn9ab53hitjlpIZM7g {
-  color: white;
+  color: var(--color-white);
 }
 
 .R8mWQBB5biDSsZarPAhng {
-  background: white;
+  background: var(--color-white);
   border-radius: 0 15px 15px 0;
   box-sizing: border-box;
   height: 100%;

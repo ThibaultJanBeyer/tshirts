@@ -1,3 +1,7 @@
+body {
+  background: var(--color-white);
+}
+
 /* Sticky Footer */
 body, #app, .app {
   min-height: 100vh;

@@ -5,6 +5,7 @@
   --color-primary-rgbval: 65, 105, 225;
   --color-grey: lightgrey;
   --color-subtlegrey: #f3f3f3;
+  --color-white: #fcfcfc;
 
   --gradient-primary: linear-gradient(to bottom right, aqua 0%, royalblue 100%);
   --gradient-grey: linear-gradient(to bottom right, lightgrey 0%, darkgray 100%);
@@ -98,7 +99,7 @@ h4 {
 }
 
 .button__helper {
-  background: white;
+  background: var(--color-white);
   display: block;
   outline-offset: -1px;
   outline: 1px solid transparent;
