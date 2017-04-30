@@ -43,7 +43,7 @@ const Gallery = ({ title }) => {
           <GalleryItem level={3} />
         </div>
       </div>
-      <Button content={`Load more ${title}`} primary="true" />
+      <Button content={`Load more ${title}`} primary />
     </div>
   );
 };

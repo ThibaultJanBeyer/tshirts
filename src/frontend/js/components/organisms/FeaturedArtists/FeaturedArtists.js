@@ -34,7 +34,7 @@ const FeaturedArtists = ({ title }) => {
           <ArtistCard />
         </div>
         <div className={`${styles["featuredartists__card"]} ${styles["featuredartists__card--you"]}`}>
-          <Button content="You? Start selling art now!" primary="true" />
+          <Button content="You? Start selling art now!" primary />
         </div>
       </div>
     </div>
