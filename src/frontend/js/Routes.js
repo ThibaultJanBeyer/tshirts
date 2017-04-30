@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { 
+  ItemPage,
   HomePage,
   NotFound,
   ScrollToTop,
@@ -14,6 +15,11 @@ const Routes = () => {
       <Route exact path="/">
         <ScrollToTop>
           <HomePage />
+        </ScrollToTop>
+      </Route>
+      <Route path="/shop/:username/:itemId">
+        <ScrollToTop>
+          <ItemPage />
         </ScrollToTop>
       </Route>
       <Route path="/shop">
