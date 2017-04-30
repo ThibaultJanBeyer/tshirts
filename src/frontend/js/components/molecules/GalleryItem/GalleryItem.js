@@ -5,50 +5,44 @@ import { Link } from 'react-router-dom';
 import style from "./GalleryItem.css";
 import { 
   FlexibleImg,
+  seoFriendlyUrl,
   theme
 } from "components";
 
 // see http://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
 const GalleryItem = ({ 
-  designer,
-  designerLink,
+  user,
   level,
-  link,
   price,
   title
 }) => {
+
+  const safeTitle = seoFriendlyUrl(title);
+  const safeUsername = seoFriendlyUrl(user.username);
 
   let heading;
   if(level === 1) {
     heading = (
       <h1 className={style["galleryitem__title"]}>
-        <Link to={link} className={theme.link}>
-          {title}
-        </Link>
+        {title}
       </h1>
     );
   } else if(level === 2) {
     heading = (
       <h2 className={style["galleryitem__title"]}>
-        <Link to={link} className={theme.link}>
           {title}
-        </Link>
       </h2>
     );
   } else if(level === 3) {
     heading = (
       <h3 className={style["galleryitem__title"]}>
-        <Link to={link} className={theme.link}>
           {title}
-        </Link>
       </h3>
     );
   } else if(level === 4) {
     heading = (
       <h4 className={style["galleryitem__title"]}>
-        <Link to={link} className={theme.link}>
           {title}
-        </Link>
       </h4>
     );
   }
@@ -57,15 +51,19 @@ const GalleryItem = ({
     <div  className={style["galleryitem"]}>
 
       <div className={style["galleryitem__head"]}>
-        <FlexibleImg />
+        <Link to={`shop/${safeUsername}/${safeTitle}`}>
+          <FlexibleImg />
+        </Link>
       </div>
 
       <div className={style["galleryitem__body"]}>
-        {heading}
+        <Link to={`shop/${safeUsername}/${safeTitle}`} className={theme.link}>
+          {heading}
+        </Link>
         <div>
           <div className={style["galleryitem__author"]}>
-            by <Link to={designerLink} className={theme.link}>
-              {designer}
+            by <Link to={safeUsername} className={theme.link}>
+              {user.username}
             </Link>
           </div>
           <div className={style["galleryitem__price"]}>
@@ -79,10 +77,10 @@ const GalleryItem = ({
 };
 
 GalleryItem.defaultProps = {
-  designer: "thibault-jan-beyer",
-  designerLink: "/shop",
+  user: {
+    username: "thibault-jan-beyer",
+  },
   level: 2,
-  link: "/shop",
   price: `${
           Math.floor(Math.random() * 9999)
           },${
@@ -92,10 +90,8 @@ GalleryItem.defaultProps = {
 };
 
 GalleryItem.propTypes = {
-  designer: PropTypes.string,
-  designerLink: PropTypes.string,
+  user: PropTypes.object,
   level: PropTypes.number,
-  link: PropTypes.string,
   price: PropTypes.string,
   title: PropTypes.string
 };
