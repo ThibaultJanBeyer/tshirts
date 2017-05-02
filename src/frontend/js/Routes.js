@@ -17,6 +17,21 @@ const Routes = () => {
           <HomePage />
         </ScrollToTop>
       </Route>
+      <Route path="/designer">
+        <ScrollToTop>
+          <ShopPage />
+        </ScrollToTop>
+      </Route>
+      <Route path="/artists/:query">
+        <ScrollToTop>
+          <ShopPage />
+        </ScrollToTop>
+      </Route>
+      <Route path="/shop/search/:query">
+        <ScrollToTop>
+          <ShopPage />
+        </ScrollToTop>
+      </Route>
       <Route path="/shop/:username/:itemId">
         <ScrollToTop>
           <ItemPage />
