@@ -4,22 +4,24 @@ import styles from "./FooterMenu.css";
 
 const FooterMenu = () => {
   const links = [ "lorem ipsum", "lorem ipsum dolor", "lorem", "lorem ipsum" ];
-  const linkList = links.map((link, i) => <li key={i} className={styles["list-item"]}>{link}</li>);
+  const linkList = links.map(
+    (link, i) => <li key={i} className={styles["FooterMenu__list-item"]}>{link}</li>
+  );
 
   return (
     <div>
-      <div className={styles["list-container"]}>
-        <ul className={styles.list}>
+      <div className={styles["FooterMenu__container"]}>
+        <ul className={styles["FooterMenu__list"]}>
           {linkList}
         </ul>
-        <ul className={styles.list}>
+        <ul className={styles["FooterMenu__list"]}>
           {linkList}
         </ul>
-        <ul className={styles.list}>
+        <ul className={styles["FooterMenu__list"]}>
           {linkList}
         </ul>
       </div>
-      <div className={styles.copyright}>
+      <div className={styles["FooterMenu__copyright"]}>
         © xy. All Rights Reserved
       </div>
     </div>

@@ -1,8 +1,8 @@
-.list {
+.TopMenu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.list-item {
+.TopMenu__item {
   font-size: 0.9rem;
 }

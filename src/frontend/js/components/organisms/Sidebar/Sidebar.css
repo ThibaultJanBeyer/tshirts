@@ -1,16 +1,16 @@
-.sidebar {
+.Sidebar {
   float: left;
   margin-right: var(--gutter-l);
   vertical-align: top;
   width: 215px;
 }
 
-.sidebar__title {
+.Sidebar__title {
   background-color: var(--color-subtlegrey);
   margin-bottom: var(--gutter);
   padding: 15px 20px;
 }
 
-.sidebar__container {
+.Sidebar__container {
   margin-bottom: var(--gutter);
 }

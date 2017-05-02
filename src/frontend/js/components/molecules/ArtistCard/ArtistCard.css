@@ -1,9 +1,9 @@
-.artistcard {
+.ArtistCard {
   height: 100%;
   width: 100%;
 }
 
-.artistcard__head {
+.ArtistCard__head {
   cursor: pointer;
   height: 25%;
   margin-bottom: var(--gutter-s);
@@ -12,17 +12,17 @@
   width: 100%;
 }
 
-.artistcard__head span {
+.ArtistCard__head span {
   display: block;
 }
 
-.artistcard__head:hover .artistcard__head-content,
-.artistcard__head:focus .artistcard__head-content {
+.ArtistCard__head:hover .ArtistCard__head-content,
+.ArtistCard__head:focus .ArtistCard__head-content {
   box-shadow: inset 0 -30px 70px black;
   transform: scale(1.05, 1.05);
 }
 
-.artistcard__head-content {
+.ArtistCard__head-content {
   box-shadow: inset 0 -40px 90px black;
   color: var(--color-white);
   height: 100%;
@@ -35,11 +35,11 @@
   width: 100%;
 }
 
-.artistcard__info {
+.ArtistCard__info {
   font-size: 0.7rem;
 }
 
-.artistcard__avatar {
+.ArtistCard__avatar {
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -48,7 +48,7 @@
   margin: var(--gutter-s) auto var(--gutter-xs) auto;
 }
 
-.artistcard__body {
+.ArtistCard__body {
   align-content: space-between;
   display: flex;
   flex-wrap: wrap;
@@ -56,12 +56,12 @@
   justify-content: space-between;
 }
 
-.artistcard__item {
+.ArtistCard__item {
   height: 48.75%;
   width: 48.25%;
 }
 
-.artistcard__item--more {
+.ArtistCard__item--more {
   align-items: center;
   background-color: var(--color-subtlegrey);
   border: 1px solid transparent;
@@ -76,8 +76,8 @@
               border-color 200ms ease-in-out;
 }
 
-.artistcard__item--more:hover,
-.artistcard__item--more:focus {
+.ArtistCard__item--more:hover,
+.ArtistCard__item--more:focus {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }

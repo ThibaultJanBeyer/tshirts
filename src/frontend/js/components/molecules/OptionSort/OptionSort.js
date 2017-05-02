@@ -13,17 +13,17 @@ const OptionSort = ({ sort }) => {
 
   allOptions.forEach(function(option, i) {
     if(option === sort) {
-      options.push((<option key={i} value={option} selected>{option}</option>));
+      options.push((<option key={i} value={option} defaultValue>{option}</option>));
     } else {
       options.push((<option key={i} value={option}>{option}</option>));
     }
   });
 
   return (
-    <div className={styles["optionsort"]}>
+    <div className={styles["OptionSort"]}>
       <label>
         Sort by: 
-        <select name="sort" className={styles["optionsort__select"]}>
+        <select name="sort" className={styles["OptionSort__select"]}>
           {options}
         </select>
       </label>

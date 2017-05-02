@@ -10,7 +10,7 @@ import help from "components/themes/helpers.css";
 
 const MainMenu = () => {
   return (
-    <nav className={styles["mainmenu"]} role="navigation" aria-labelledby="menu">
+    <nav className={styles["MainMenu"]} role="navigation" aria-labelledby="menu">
       <div className={theme.constrain}>
         <h2 id="menu" className={help.visuallyhidden}>Main Menu</h2>
         <TopMenu />

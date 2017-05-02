@@ -11,21 +11,21 @@ import styles from "./Gallery.css";
 
 const Gallery = ({ title, titleNode, amount, level }) => {
   const TitleNode = (titleNode) ? (
-    <h2 className={styles["gallery__title"]}>{title}</h2>
+    <h2 className={styles["Gallery__title"]}>{title}</h2>
   ) : null;
 
   const ItemNodes = [];
   for (let i = 0; i < amount; i++)
     ItemNodes.push((
-      <div key={i} className={styles["gallery__item"]}>
+      <div key={i} className={styles["Gallery__item"]}>
         <GalleryItem level={level} />
       </div>
     ));
 
   return (
-    <div className={`${theme["constrain"]} ${styles["gallery"]}`}>
+    <div className={`${theme["constrain"]} ${styles["Gallery"]}`}>
       {TitleNode}
-      <div className={styles["gallery__container"]}>
+      <div className={styles["Gallery__container"]}>
         {ItemNodes}
       </div>
       <Button content={`Load more ${title}`} primary />
@@ -42,8 +42,8 @@ Gallery.defaultProps = {
 Gallery.propTypes = {
   title: PropTypes.string.isRequired,
   titleNode: PropTypes.bool,
-  amount: PropTypes.integer,
-  level: PropTypes.integer
+  amount: PropTypes.number,
+  level: PropTypes.number
 };
 
 export default Gallery;

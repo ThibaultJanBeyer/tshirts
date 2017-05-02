@@ -1,24 +1,19 @@
-.container {
-  margin: auto;
-  max-width: 960px;
-}
-
-.list-container {
+.FooterMenu__container {
   display: flex;
   align-content: center;
   justify-content: space-between;
   margin-bottom: var(--gutter);
 }
 
-.list {
+.FooterMenu__list {
   display: inline-block;
   text-align: left;
 }
 
-.list-item {
+.FooterMenu__list-item {
   padding: 5px 0;
 }
 
-.copyright {
+.FooterMenu__copyright {
   color: grey;
 }

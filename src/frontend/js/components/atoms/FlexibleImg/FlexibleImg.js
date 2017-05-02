@@ -7,8 +7,8 @@ import style from "./FlexibleImg.css";
 
 const FlexibleImg = ({ source, altText }) => {
   return (
-    <div className={style["flexibleimg"]}>
-      <img src={source} alt={altText} className={style["flexibleimg__img"]}/>
+    <div className={style["FlexibleImg"]}>
+      <img src={source} alt={altText} className={style["FlexibleImg__img"]}/>
     </div>
   );
 };

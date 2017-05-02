@@ -1,0 +1,12 @@
+.CounterResults__span {
+  margin-right: var(--gutter-xs);
+}
+
+.CounterResults__title {
+  display: inline;
+  font-size: 2rem;
+}
+
+.CounterResults__sort {
+  float: right;
+}

@@ -9,7 +9,7 @@ import {
   GenericTemplate,
   Header,
   MainMenu,
-  ResultsCounter,
+  ResultsTopbar,
   Sidebar,
   theme
 } from "components";
@@ -18,7 +18,8 @@ import styles from './ShopPage.css';
 
 class ShopPage extends React.Component {
   render() {
-    const { location } = this.props;
+    const { location, match } = this.props;
+    const { query } = match.params;
     const { sort="popular",
             product="tshirts" } = queryString.parse(location.search);
 
@@ -28,10 +29,10 @@ class ShopPage extends React.Component {
                         menu={<MainMenu />}
                         footer={<Footer />} >
         <div className={theme["gutter"]}>
-          <ResultsCounter sort={sort} product={product} />
+          <ResultsTopbar sort={sort} product={product} query={query} />
         </div>
         <div  className={theme["gutter"]}>
-          <div className={`${theme["constrain"]} ${styles["shoppage__body"]}`}>
+          <div className={`${theme["constrain"]} ${styles["ShopPage__body"]}`}>
             <Sidebar sort={sort} product={product}/>
             <Gallery  title={`${sort} ${product}`}
                       titleNode={false}

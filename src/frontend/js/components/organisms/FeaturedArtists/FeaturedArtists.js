@@ -11,29 +11,29 @@ import styles from "./FeaturedArtists.css";
 
 const FeaturedArtists = ({ title }) => {
   const titleNode = (title) ? (
-    <h2 className={styles["featuredartists__title"]}>{title}</h2>
+    <h2 className={styles["FeaturedArtists__title"]}>{title}</h2>
   ) : null;
 
   return (
-    <div className={`${theme["constrain"]} ${styles["featuredartists"]}`}>
+    <div className={`${theme["constrain"]} ${styles["FeaturedArtists"]}`}>
       {titleNode}
-      <div className={styles["featuredartists__container"]}>
-        <div className={styles["featuredartists__card"]}>
+      <div className={styles["FeaturedArtists__container"]}>
+        <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
-        <div className={styles["featuredartists__card"]}>
+        <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
-        <div className={styles["featuredartists__card"]}>
+        <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
-        <div className={styles["featuredartists__card"]}>
+        <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
-        <div className={styles["featuredartists__card"]}>
+        <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
-        <div className={`${styles["featuredartists__card"]} ${styles["featuredartists__card--you"]}`}>
+        <div className={`${styles["FeaturedArtists__card"]} ${styles["FeaturedArtists__card--you"]}`}>
           <Button content="You? Start selling now!" primary />
         </div>
       </div>

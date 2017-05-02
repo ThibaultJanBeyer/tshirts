@@ -7,8 +7,8 @@ const Logo = ({content, viewBox, png, src, alt}) => {
   if(png) return <img src={src} alt={alt} />;
 
   return (
-    <div className={styles["logo"]}>
-      <div className={styles["logo-container"]}>
+    <div className={styles["Logo"]}>
+      <div className={styles["Logo-container"]}>
         {content}
       </div>
     </div>

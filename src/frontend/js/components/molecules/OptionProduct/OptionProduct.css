@@ -1,13 +1,13 @@
-.optionproduct__legend {
+.OptionProduct__legend {
   margin-bottom: var(--gutter-s);
 }
 
-.optionproduct__label {
+.OptionProduct__label {
   display: block;
   margin-bottom: var(--gutter-xs);
   width: 100%;
 }
 
-.optionproduct__input {
+.OptionProduct__input {
   margin-right: var(--gutter-xs);
 }

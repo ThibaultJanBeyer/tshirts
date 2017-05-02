@@ -6,12 +6,12 @@ import styles from "./SubscribeEmail.css";
 
 const SubscribeEmail = () => {
   return (
-    <div className={styles.container}>
-      <input  className={`${theme.input} ${styles.input}`} 
+    <div className={styles["SubscribeEmail"]}>
+      <input  className={`${theme.input} ${styles["SubscribeEmail__input"]}`} 
               type="email"
               aria-label="email"
               placeholder="your@email" />
-      <button className={styles.button}
+      <button className={styles["SubscribeEmail__button"]}
               type="submit" >
         Subscribe
       </button>

@@ -10,15 +10,15 @@ import styles from "./Sidebar.css";
 
 const Sidebar = ({ sort, product }) => {
   return (
-    <div className={styles["sidebar"]}>
+    <div className={styles["Sidebar"]}>
       <div>
-        <h3 className={styles["sidebar__title"]}>
+        <h3 className={styles["Sidebar__title"]}>
           Options
         </h3>
-        <div className={styles["sidebar__container"]}>
+        <div className={styles["Sidebar__container"]}>
           <OptionProduct product={product} />
         </div>
-        <div className={styles["sidebar__container"]}>
+        <div className={styles["Sidebar__container"]}>
           <OptionTopTags />
         </div>
       </div>

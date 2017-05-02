@@ -6,10 +6,12 @@ import style from "./Searchbar.css";
 
 const Searchbar = () => {
   return (
-    <div className={style.container} role="search">
-      <input className={`${style.input} ${theme.input}`} type="search" aria-label="Search" placeholder="search..." />
-      <button className={style.button} type="submit">
-        <IconSearch className={style.icon}/>
+    <div className={style["Searchbar"]} role="search">
+      <input  className={`${style["Searchbar__input"]} ${theme.input}`}
+              type="search" aria-label="Search" 
+              placeholder="search..." />
+      <button className={style["Searchbar__button"]} type="submit">
+        <IconSearch className={style["Searchbar__icon"]}/>
       </button>
     </div>
   );

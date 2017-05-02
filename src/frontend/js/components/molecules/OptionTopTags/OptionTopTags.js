@@ -14,8 +14,8 @@ const OptionTopTags = () => {
   });
 
   return (
-    <fieldset className={styles["optiontoptags"]} role="group" aria-labelledby="toptags">
-      <legend className={styles["optiontoptags__legend"]} id="toptags">
+    <fieldset className={styles["OptionTopTags"]} role="group" aria-labelledby="toptags">
+      <legend className={styles["OptionTopTags__legend"]} id="toptags">
         Top Tags:
       </legend>
       {TopTags}

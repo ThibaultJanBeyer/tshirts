@@ -1,20 +1,20 @@
-.galleryitem {
+.GalleryItem {
   height: 100%;
   width: 100%;
 }
 
-.galleryitem__head {
+.GalleryItem__head {
   cursor: pointer;
   height: 80%;
   margin-bottom: var(--gutter-xs);
   width: 100%;
 }
 
-.galleryitem__head:hover img {
+.GalleryItem__head:hover img {
   transform: scale(1.05, 1.05)
 }
 
-.galleryitem__title {
+.GalleryItem__title {
   display: block;
   font-weight: normal;
   overflow: hidden;
@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 
-.galleryitem__author {
+.GalleryItem__author {
   display: inline-block;
   font-size: 0.7rem;
   overflow: hidden;
@@ -32,7 +32,7 @@
   width: 60%;
 }
 
-.galleryitem__price {
+.GalleryItem__price {
   display: inline-block;
   font-size: 0.7rem;
   text-align: right;

@@ -1,15 +1,15 @@
-.gallery__title {
+.Gallery__title {
   text-align: center;
   margin-bottom: var(--gutter-s);
 }
 
-.gallery__container {
+.Gallery__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.gallery__item {
+.Gallery__item {
   height: 260px;
   margin-bottom: var(--gutter);
   width: 218px;

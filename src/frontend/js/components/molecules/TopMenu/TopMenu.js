@@ -7,10 +7,11 @@ import { theme } from "components";
 const TopMenu = () => {
   const links = {
     "Home": "/",
-    "Newest": "/shop",
+    "Newest": "/shop/search/testo",
     "Featured": "/shop?sort=featured&product=posters",
     "Most Popular": "/shop?sort=popular&product=mugs",
     "Artists": "/artists",
+    "Blog": "/blog",
     "Make your own": "/designer"
   };
 
@@ -20,7 +21,7 @@ const TopMenu = () => {
       const url = links[name];
       linkList.push(
         (
-          <li key={name} className={styles["list-item"]}>
+          <li key={name} className={styles["TopMenu__item"]}>
             <Link to={`${url}`} className={theme.link}>{name}</Link>
           </li>
         )
@@ -29,7 +30,7 @@ const TopMenu = () => {
   }
 
   return (
-    <ul className={styles["list"]}>
+    <ul className={styles["TopMenu"]}>
       {linkList}
     </ul>
   );

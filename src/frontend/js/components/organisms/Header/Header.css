@@ -1,10 +1,10 @@
-.header__container {
+.Header__container {
   margin: auto;
   max-width: 960px;
   width: 100%;
 }
 
-.header__topbar {
+.Header__topbar {
   align-items: center;
   background: #F2F2F6;
   display: flex;
@@ -12,8 +12,8 @@
   margin-bottom: var(--gutter);
 }
 
-.header__searcharea {
-  composes: header__container;
+.Header__searcharea {
+  composes: Header__container;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,11 +21,11 @@
   min-height: 75px;
 }
 
-.header__leftcontainer {
+.Header__leftcontainer {
   align-self: flex-start;
 }
 
-.header__rightcontainer {
+.Header__rightcontainer {
   width: 50%;
 }
 

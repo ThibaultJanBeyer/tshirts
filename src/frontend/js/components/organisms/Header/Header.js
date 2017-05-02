@@ -10,17 +10,17 @@ import styles from "./Header.css";
 
 const Header = () => {
   return (
-    <header className={styles["header"]} role="banner">
-      <section className={styles["header__topbar"]}>
-        <div className={styles["header__container"]}>
+    <header className={styles["Header"]} role="banner">
+      <section className={styles["Header__topbar"]}>
+        <div className={styles["Header__container"]}>
           <Topbar />
         </div>
       </section>
-      <section className={styles["header__searcharea"]}>
-        <div className={styles["header__leftcontainer"]}>
+      <section className={styles["Header__searcharea"]}>
+        <div className={styles["Header__leftcontainer"]}>
           <Logo />
         </div>
-        <div className={styles["header__rightcontainer"]}>
+        <div className={styles["Header__rightcontainer"]}>
           <div className={styles["searchbar__container"]}>
             <Searchbar />
           </div>

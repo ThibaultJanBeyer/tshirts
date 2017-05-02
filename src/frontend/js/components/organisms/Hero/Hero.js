@@ -9,15 +9,15 @@ import {
 
 const Hero = () => {
   return (
-    <div className={styles["hero"]}>
-      <div className={styles["hero__main"]}>
+    <div className={styles["Hero"]}>
+      <div className={styles["Hero__main"]}>
         <FlexibleImg source="https://unsplash.it/1000/500/?random"/>
       </div>
       <div className={theme.constrain}>
-        <div className={styles["hero__second"]}>
+        <div className={styles["Hero__second"]}>
           <FlexibleImg source="https://unsplash.it/5000/2000/?random"/>
         </div>
-        <div className={styles["hero__third"]}>
+        <div className={styles["Hero__third"]}>
           <FlexibleImg source="https://unsplash.it/500/200/?random"/>
         </div>
       </div>

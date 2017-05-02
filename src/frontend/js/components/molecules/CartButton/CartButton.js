@@ -6,8 +6,8 @@ import style from "./CartButton.css";
 
 const CartButton = () => {
   return (
-    <button className={style.button} type="submit">
-      <IconCart className={style.icon}/>
+    <button className={style["CartButton"]} type="submit">
+      <IconCart className={style["CartButton__icon"]}/>
     </button>
   );
 };

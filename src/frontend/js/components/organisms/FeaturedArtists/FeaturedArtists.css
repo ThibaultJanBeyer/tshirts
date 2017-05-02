@@ -1,9 +1,9 @@
-.featuredartists__title {
+.FeaturedArtists__title {
   text-align: center;
   margin-bottom: var(--gutter-s);
 }
 
-.featuredartists__container {
+.FeaturedArtists__container {
 	background:
 		/* Shadow covers */
 		linear-gradient(to left, var(--color-white) 100%, transparent),
@@ -29,7 +29,7 @@
   padding-bottom: var(--gutter);
 }
 
-.featuredartists__card {
+.FeaturedArtists__card {
   display: inline-block;
   height: 520px;
   margin-right: var(--gutter-xl);
@@ -37,7 +37,7 @@
   width: 340px;
 }
 
-.featuredartists__card--you {
+.FeaturedArtists__card--you {
   align-items: center;
   background: var(--color-subtlegrey);
   display: inline-flex;

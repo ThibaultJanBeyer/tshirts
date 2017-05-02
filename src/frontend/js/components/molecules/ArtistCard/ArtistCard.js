@@ -16,38 +16,38 @@ const ArtistCard = ({ user }) => {
   const url = `shop/${seoFriendlyUrl(user.username)}`;
 
   return (
-    <div className={styles["artistcard"]}>
+    <div className={styles["ArtistCard"]}>
 
-      <div className={styles["artistcard__head"]}>
+      <div className={styles["ArtistCard__head"]}>
           <FlexibleImg />
           <Link to={url}>
-            <span className={styles["artistcard__head-content"]}>
-              <span className={styles["artistcard__avatar"]}>
+            <span className={styles["ArtistCard__head-content"]}>
+              <span className={styles["ArtistCard__avatar"]}>
                 <FlexibleImg />
               </span>
-              <h3 className={styles["artistcard__name"]}>
+              <h3 className={styles["ArtistCard__name"]}>
                 {user.username}
               </h3>
-              <span className={styles["artistcard__info"]}>
+              <span className={styles["ArtistCard__info"]}>
                 from {user.country}
               </span>
             </span>
           </Link>
       </div>
 
-      <div className={styles["artistcard__body"]}>
-        <div className={styles["artistcard__item"]}>
+      <div className={styles["ArtistCard__body"]}>
+        <div className={styles["ArtistCard__item"]}>
           <GalleryItem level={4} />
         </div>
-        <div className={styles["artistcard__item"]}>
+        <div className={styles["ArtistCard__item"]}>
           <GalleryItem level={4} />
         </div>
-        <div className={styles["artistcard__item"]}>
+        <div className={styles["ArtistCard__item"]}>
           <GalleryItem level={4} />
         </div>
-        <div className={styles["artistcard__item"]}>
+        <div className={styles["ArtistCard__item"]}>
           <Link to={url}>
-            <span className={`${styles["artistcard__item"]} ${styles["artistcard__item--more"]}`}>
+            <span className={`${styles["ArtistCard__item"]} ${styles["ArtistCard__item--more"]}`}>
               +
             </span>
           </Link>

@@ -1,9 +1,9 @@
-.container {
+.Searchbar {
   height: 45px;
   position: relative;
 }
 
-.input {
+.Searchbar__input {
   border: 1px solid lightgrey;
   border-radius: 15px;
   height: 100%;
@@ -11,7 +11,7 @@
   padding: 5px 0 5px 15px;
 }
 
-.button {
+.Searchbar__button {
   border: 1px solid lightgrey;
   border-radius: 0 15px 15px 0;
   cursor: pointer;
@@ -23,12 +23,12 @@
   transition: 250ms ease-in-out;
 }
 
-.button:hover,
-.button:focus {
+.Searchbar__button:hover,
+.Searchbar__button:focus {
   opacity: 1;
 }
 
-.icon {
+.Searchbar__icon {
   width: 40px;
   height: 40px;
 }

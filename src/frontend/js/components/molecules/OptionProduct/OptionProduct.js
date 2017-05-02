@@ -10,9 +10,9 @@ const OptionProduct = ({ product }) => {
   allProducts.forEach(function(prod, i) {
     if(prod === product) {
       options.push((
-        <label className={styles["optionproduct__label"]}>
+        <label key={prod} className={styles["OptionProduct__label"]}>
           <input  type="radio"
-                  className={styles["optionproduct__input"]}
+                  className={styles["OptionProduct__input"]}
                   name="products"
                   checked
                   value={prod} />
@@ -21,9 +21,9 @@ const OptionProduct = ({ product }) => {
       ));
     } else {
       options.push((
-        <label className={styles["optionproduct__label"]}>
+        <label key={prod} className={styles["OptionProduct__label"]}>
           <input  type="radio"
-                  className={styles["optionproduct__input"]}
+                  className={styles["OptionProduct__input"]}
                   name="products"
                   value={prod} />
           {prod}
@@ -33,8 +33,8 @@ const OptionProduct = ({ product }) => {
   });
 
   return (
-    <fieldset className={styles["optionproduct"]} role="group" aria-labelledby="products">
-      <legend className={styles["optionproduct__legend"]} id="products">
+    <fieldset className={styles["OptionProduct"]} role="group" aria-labelledby="products">
+      <legend className={styles["OptionProduct__legend"]} id="products">
         Products:
       </legend>
       {options}
