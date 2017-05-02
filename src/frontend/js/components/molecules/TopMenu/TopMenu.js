@@ -7,12 +7,11 @@ import { theme } from "components";
 const TopMenu = () => {
   const links = {
     "Home": "/",
-    "Newest": "/shop?filter=newest",
-    "Featured": "/shop?filter=featured",
-    "Most Popular": "/shop?filter=popular",
+    "Newest": "/shop",
+    "Featured": "/shop?sort=featured&product=posters",
+    "Most Popular": "/shop?sort=popular&product=mugs",
     "Artists": "/artists",
-    "Make your own": "/designer",
-    "Item": "/shop/alfredo/something"
+    "Make your own": "/designer"
   };
 
   let linkList = [];
