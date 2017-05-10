@@ -1,0 +1,12 @@
+.ItemPresentation {
+  display: flex;
+}
+
+.ItemPresentation__images {
+  width: calc(75% - var(--gutter));
+  margin-right: var(--gutter);
+}
+
+.ItemPresentation__options {
+  width: calc(25% + var(--gutter));
+}

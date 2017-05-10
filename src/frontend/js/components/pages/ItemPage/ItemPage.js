@@ -6,6 +6,7 @@ import{
   Footer,
   GenericTemplate,
   Header,
+  ItemPresentation,
   MainMenu,
   theme
 } from "components";
@@ -19,7 +20,11 @@ class ItemPage extends React.Component {
                         header={<Header />}
                         menu={<MainMenu />}
                         footer={<Footer />} >
-        <h1>{id}</h1>
+        <div className={theme["gutter"]}>
+          <div className={`${theme["constrain"]}`}>
+            <ItemPresentation item={id} />
+          </div>
+        </div>
       </GenericTemplate>
     );
   }

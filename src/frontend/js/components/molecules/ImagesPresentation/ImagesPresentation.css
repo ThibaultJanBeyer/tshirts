@@ -1,0 +1,18 @@
+.ImagesPresentation {
+  display: flex;
+}
+
+.ImagesPresentation__small {
+  width: 80px;
+  margin-right: var(--gutter);
+}
+
+.ImagesPresentation__small-img {
+  height: 80px;
+  margin-bottom: var(--gutter);
+}
+
+.ImagesPresentation__large {
+  width: calc(100% - (80px + var(--gutter)));
+  height: 650px;
+}

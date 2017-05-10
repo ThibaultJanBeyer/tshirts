@@ -28,16 +28,20 @@ class ShopPage extends React.Component {
                         header={<Header />}
                         menu={<MainMenu />}
                         footer={<Footer />} >
+
         <div className={theme["gutter"]}>
           <ResultsTopbar sort={sort} product={product} query={query} />
         </div>
+
         <div  className={theme["gutter"]}>
           <div className={`${theme["constrain"]} ${styles["ShopPage__body"]}`}>
+
             <Sidebar sort={sort} product={product}/>
             <Gallery  title={`${sort} ${product}`}
                       titleNode={false}
                       amount={12}
                       level={2} />
+
           </div>
         </div>
 
