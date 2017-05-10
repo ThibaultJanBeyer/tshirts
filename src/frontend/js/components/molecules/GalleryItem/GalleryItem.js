@@ -51,13 +51,13 @@ const GalleryItem = ({
     <div  className={style["GalleryItem"]}>
 
       <div className={style["GalleryItem__head"]}>
-        <Link to={`shop/${safeUsername}/${safeTitle}`}>
+        <Link to={`/shop/${safeUsername}/${safeTitle}`}>
           <FlexibleImg />
         </Link>
       </div>
 
       <div className={style["GalleryItem__body"]}>
-        <Link to={`shop/${safeUsername}/${safeTitle}`} className={theme.link}>
+        <Link to={`/shop/${safeUsername}/${safeTitle}`} className={theme.link}>
           {heading}
         </Link>
         <div>
