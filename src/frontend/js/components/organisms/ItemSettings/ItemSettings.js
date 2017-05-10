@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 import { 
   FlexibleImg,
-  ImagesPresentation
+  ImagesPresentation,
+  ReactionBar,
+  SelectColor,
+  SelectPosition,
+  SelectSize
 } from 'components';
 
 import style from './ItemSettings.css';
@@ -14,59 +18,13 @@ const ItemSettings = ({ item }) => {
       {/* title */}
       <h1>{item}</h1>
 
-      {/* social bar */}
-      <ul>
-        <li>Like</li>
-        <li>Comment</li>
-        <li>Share</li>
-      </ul>
+      {/* Reaction bar */}
+      <ReactionBar />
 
       {/* selections */}
-      <fieldset role="group" aria-labelledby="color">
-        <legend id="color">Color</legend>
-        <label>
-          <input  type="radio"
-                  name="color"
-                  value="black" />
-          Black
-        </label>
-        <label>
-          <input  type="radio"
-                  name="color"
-                  value="black" />
-          white
-        </label>
-      </fieldset>
-      <fieldset role="group" aria-labelledby="size">
-        <legend id="size">Size</legend>
-        <label>
-          <input  type="radio"
-                  name="size"
-                  value="black" />
-          small
-        </label>
-        <label>
-          <input  type="radio"
-                  name="size"
-                  value="black" />
-          medium
-        </label>
-      </fieldset>
-      <fieldset role="group" aria-labelledby="position">
-        <legend id="position">Position</legend>
-        <label>
-          <input  type="radio"
-                  name="position"
-                  value="black" />
-          front
-        </label>
-        <label>
-          <input  type="radio"
-                  name="position"
-                  value="black" />
-          back
-        </label>
-      </fieldset>
+      <SelectColor />
+      <SelectSize />
+      <SelectPosition />
 
       {/* type selection */}
       <button>Change Producs Type</button>
