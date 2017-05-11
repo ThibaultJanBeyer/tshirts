@@ -20,7 +20,6 @@
 }
 
 .SelectColor__element--checked::before {
-    color: var(--color-grey);
     content: '✔';
     font-size: 0.8rem;
     left: 50%;
