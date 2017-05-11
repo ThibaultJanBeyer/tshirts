@@ -1,21 +1,21 @@
-# Front
+# Frontend
 
 ## Frontpage
-- big search
-- freatured designs
-- most popular designs
-- featured artists
-- make your own / start selling
-- most popular cathegories
-- subscribe for special offers (newsletter)
+- [X] big search
+- [X] freatured designs
+- [X] most popular designs
+- [X] featured artists
+- [O] make your own / start selling
+- [O] most popular cathegories
+- [X] subscribe for special offers (newsletter)
 
-## Search page
-- search by: most relevant, newest, most popular
-- search for: tshirts, mugs, designer
-- designs "kachelsicht" with price, name –> zoom on design on hover/focus
+## Search page (visual)
+- [X] search by: most relevant, newest, most popular
+- [X] search for: tshirts, mugs, designer
+- [X] designs "kachelsicht" with price, name –> zoom on design on hover/focus
 
 ## Design details page
-- huge picture (zoom on click)
+- [X] huge picture
 - sidebar:
     - title
     - love/share button
@@ -65,7 +65,7 @@
 
 ## custom shop  => out of scope
 
-# Back
+# Backend
 
 ## Dashboard
 - ???

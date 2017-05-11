@@ -1,0 +1,30 @@
+.SelectColor__element {
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    border: 1px solid var(--color-grey);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    margin-bottom: var(--gutter-xs);
+    margin-right: var(--gutter-xs);
+    position: relative;
+    transition: border-color 250ms;
+    width: 25px;
+}
+
+.SelectColor__element--checked {
+    border-width: 2px;
+    border-color: var(--color-primary);
+    box-shadow: 0px 0px 3px var(--color-primary);
+}
+
+.SelectColor__element--checked::before {
+    color: var(--color-grey);
+    content: '✔';
+    font-size: 0.8rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 
 import { 
   FlexibleImg,
@@ -12,7 +14,11 @@ import {
 
 import style from './ItemSettings.css';
 
-const ItemSettings = ({ item }) => {
+const ItemSettings = ({ item, location }) => {
+  const artistsSelectedDefaultColor = "black";  // @TODO: replace this with store values
+  const { color=artistsSelectedDefaultColor } = queryString.parse(location.search);
+
+  console.log(color);
   return (
     <form className={style['ItemSettings']}>
       {/* title */}
@@ -22,7 +28,7 @@ const ItemSettings = ({ item }) => {
       <ReactionBar />
 
       {/* selections */}
-      <SelectColor />
+      <SelectColor checked={color} />
       <SelectSize />
       <SelectPosition />
 
@@ -58,7 +64,8 @@ ItemSettings.defaultProps = {
 };
 
 ItemSettings.propTypes = {
-  item: PropTypes.string
+  item: PropTypes.string,
+  location: PropTypes.object
 };
 
-export default ItemSettings;
+export default withRouter(ItemSettings);
