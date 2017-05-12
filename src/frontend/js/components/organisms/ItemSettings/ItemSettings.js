@@ -17,7 +17,9 @@ import {
 
 import style from './ItemSettings.css';
 
-const ItemSettings = ({ item, location }) => {
+const ItemSettings = ({ item, location, match }) => {
+  const title = match.params.itemId;
+
   const artistsSelectedDefaultColor = "black";  // @TODO: replace this with store values
   const artistsSelectedDefaultPosition = "front";  // @TODO: replace this with store values
   const artistsSelectedDefaultType = "Unisex T-Shirt";  // @TODO: replace this with store values
@@ -29,8 +31,8 @@ const ItemSettings = ({ item, location }) => {
   return (
     <form className={style['ItemSettings']}>
 
-      <div className={style['ItemSettings__container']}>
-        <h1>{item}</h1>
+      <div className={style['ItemSettings__title']}>
+        <h1>{title}</h1>
         <ReactionBar />
       </div>
 
@@ -51,15 +53,15 @@ const ItemSettings = ({ item, location }) => {
         <ItemPrice color={color} _type={type}/>
       </div>
 
-      <div className={`${style['ItemSettings__container']} ${style['ItemSettings__submit']}`}>
+      <div className={style['ItemSettings__submit']}>
         <Button content="Add to cart" primary />
       </div>
 
-      <div>
+      <div className={style['ItemSettings__infobox']}>
         <p>
           Shipping to Germany available
         </p>
-        <p>
+        <p className={style['ItemSettings__subinfo']}>
           Estimated delivery:
           10. May (express)
           12. May (standart)
@@ -70,12 +72,13 @@ const ItemSettings = ({ item, location }) => {
 };
 
 ItemSettings.defaultProps = {
-  item: 'something'
+  item: 'Title'
 };
 
 ItemSettings.propTypes = {
   item: PropTypes.string,
-  location: PropTypes.object
+  location: PropTypes.object,
+  match: PropTypes.object
 };
 
 export default withRouter(ItemSettings);

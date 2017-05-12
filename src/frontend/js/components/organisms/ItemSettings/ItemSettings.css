@@ -1,8 +1,21 @@
+/**
+ * 1. Inline title with image on the left
+ */
+.ItemSettings__title {
+  margin-top: -9px;  /* 1 */
+  margin-bottom: var(--gutter);
+}
+
 .ItemSettings__container {
   margin-bottom: var(--gutter);
 }
 
 .ItemSettings__submit {
-  margin-bottom: var(--gutter);
+  margin-bottom: var(--gutter-l);
   text-align: center;
+}
+
+.ItemSettings__infobox {
+  border: 1px solid var(--color-grey);
+  padding: 15px;
 }

@@ -9,7 +9,7 @@ import {
 
 import style from './ItemPresentation.css';
 
-const ItemPresentation = ({ item }) => {
+const ItemPresentation = () => {
   return (
     <div className={style['ItemPresentation']}>
 
@@ -25,12 +25,12 @@ const ItemPresentation = ({ item }) => {
   );
 };
 
-ItemPresentation.defaultProps = {
-  item: 'something'
-};
+// ItemPresentation.defaultProps = {
+//   item: 'something'
+// };
 
-ItemPresentation.propTypes = {
-  item: PropTypes.string
-};
+// ItemPresentation.propTypes = {
+//   item: PropTypes.string
+// };
 
 export default ItemPresentation;

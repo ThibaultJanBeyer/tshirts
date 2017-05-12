@@ -13,8 +13,6 @@ import{
 
 class ItemPage extends React.Component {
   render() {
-    const id = this.props.match.params.itemId;
-    console.log(id);
     return (
       <GenericTemplate  title="ItemPage!"
                         header={<Header />}
@@ -22,7 +20,7 @@ class ItemPage extends React.Component {
                         footer={<Footer />} >
         <div className={theme["gutter"]}>
           <div className={`${theme["constrain"]}`}>
-            <ItemPresentation item={id} />
+            <ItemPresentation />
           </div>
         </div>
       </GenericTemplate>
@@ -34,4 +32,4 @@ ItemPage.propTypes = {
   match: PropTypes.object.isRequired
 };
 
-export default withRouter(ItemPage);
+export default ItemPage;
