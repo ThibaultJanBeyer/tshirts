@@ -39,15 +39,19 @@ class SelectColor extends React.Component {
                     (checked) ? style["SelectColor__element--checked"] : ""
                   }`
                 }
-                style={{ background: color.hex,
-                         color: (dark) ? "#fff" : "#000" }} >
+                style={{ color: (dark) ? "#fff" : "#000" }} >
 
           <input  type="radio"
                   className={help["visuallyhidden"]}
                   name="color"
                   onChange={this.handleChange}
                   value={color.key} />
-          <span className={help["visuallyhidden"]}>{color.key}</span>
+          <span className={style["SelectColor__color"]}
+                style={{
+                  background: color.hex,
+                  color: color.hex }}>
+            {color.key}
+          </span>
 
         </label>
       );
