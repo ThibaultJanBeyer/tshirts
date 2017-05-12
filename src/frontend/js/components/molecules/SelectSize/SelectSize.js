@@ -8,14 +8,14 @@ import style from './SelectSize.css';
 
 const SelectSize = ({ sizes, checked }) => {
   const Sizes = sizes.map(size => {
-    const checked = size === checked;
+    const selected = size === checked;
     return (
       <label  key={size}
               className={
                 `${
                   style["SelectSize__element"]
                   } ${
-                  (checked) ? style["SelectSize__element--checked"] : ""
+                  (selected) ? style["SelectSize__element--checked"] : ""
                 }`
               } >
 
@@ -27,10 +27,10 @@ const SelectSize = ({ sizes, checked }) => {
 
       </label>
     );
-  }, this);
+  });
 
   return (
-    <fieldset role="group" aria-labelledby="size">
+    <fieldset role="group" aria-labelledby="size" className={style["SelectSize"]}>
       <legend id="size">Size</legend>
       {Sizes}
     </fieldset>
