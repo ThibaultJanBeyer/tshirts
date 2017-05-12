@@ -1,0 +1,21 @@
+.SelectType {
+  margin-bottom: var(--gutter);
+}
+
+.SelectType__button {
+  border: 1px solid var(--color-grey);
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.SelectType__button::before {
+  content: "▾";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
