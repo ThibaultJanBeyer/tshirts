@@ -1,0 +1,8 @@
+.ItemSettings__container {
+  margin-bottom: var(--gutter);
+}
+
+.ItemSettings__submit {
+  margin-bottom: var(--gutter);
+  text-align: center;
+}
