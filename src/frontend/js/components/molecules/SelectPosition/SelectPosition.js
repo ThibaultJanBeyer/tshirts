@@ -2,35 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // import { theme } from 'components';
+import help from "components/themes/helpers.css";
 
-// import style from './SelectPosition.css';
+import style from './SelectPosition.css';
 
-const SelectPosition = ({ property }) => {
+const SelectPosition = ({ positions, checked }) => {
+  const Positions = positions.map(position => {
+    const selected = position === checked;
+    return (
+      <label  key={position}
+              className={
+                `${
+                  style["SelectPosition__element"]
+                  } ${
+                  (selected) ? style["SelectPosition__element--checked"] : ""
+                }`
+              } >
+
+        <input  type="radio"
+                className={help["visuallyhidden"]}
+                name="position"
+                value={position} />
+        <span>{position}</span>
+
+      </label>
+    );
+  });
+
   return (
-    <fieldset role="group" aria-labelledby="position">
-      <legend id="position">Position</legend>
-      <label>
-        <input  type="radio"
-                name="position"
-                value="black" />
-        front
-      </label>
-      <label>
-        <input  type="radio"
-                name="position"
-                value="black" />
-        back
-      </label>
+    <fieldset role="group" aria-labelledby="position" className={style["SelectPosition"]}>
+      <legend id="position">position</legend>
+      {Positions}
     </fieldset>
   );
 };
 
 SelectPosition.defaultProps = {
-  property: 'something'
+  positions: [
+    'front',
+    'back'
+  ],
+  checked: 'front'
 };
 
 SelectPosition.propTypes = {
-  property: PropTypes.string
+  positions: PropTypes.arrayOf(PropTypes.string),
+  checked: PropTypes.string  // selected color
 };
 
 export default SelectPosition;
