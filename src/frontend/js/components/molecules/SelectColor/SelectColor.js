@@ -54,7 +54,7 @@ class SelectColor extends React.Component {
     }, this);
 
     return (
-      <fieldset role="group" aria-labelledby="color">
+      <fieldset role="group" aria-labelledby="color" className={style["SelectColor"]}>
         <legend id="color">Color</legend>
         {Colors}
       </fieldset>
