@@ -28,6 +28,12 @@ const ItemSettings = ({ item, location, match }) => {
           position=artistsSelectedDefaultPosition,
           type=artistsSelectedDefaultType } = queryString.parse(location.search);
 
+  const tomorrow = new Date(new Date().getDate() + 1);
+  const delivery = {
+    month: tomorrow.getDate() + 1,
+    day: tomorrow.getDay()
+  }
+
   return (
     <form className={style['ItemSettings']}>
 
@@ -62,9 +68,8 @@ const ItemSettings = ({ item, location, match }) => {
           Shipping to Germany available
         </p>
         <p className={style['ItemSettings__subinfo']}>
-          Estimated delivery:
-          10. May (express)
-          12. May (standart)
+          Estimated delivery: <br />
+          <span>{tomorrow.toLocaleDateString('de')}</span> (express)
         </p>
       </div>
     </form>

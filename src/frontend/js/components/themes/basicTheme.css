@@ -3,6 +3,7 @@
 :root {
   --color-primary: royalblue;
   --color-primary-rgbval: 65, 105, 225;
+  --color-darkgrey: grey;
   --color-grey: lightgrey;
   --color-subtlegrey: #f3f3f3;
   --color-white: #fcfcfc;
