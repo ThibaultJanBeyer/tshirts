@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import {
+  ArtistHeader,
   FlexibleImg,
   GalleryItem,
   seoFriendlyUrl,
@@ -18,22 +19,7 @@ const ArtistCard = ({ user }) => {
   return (
     <div className={styles["ArtistCard"]}>
 
-      <div className={styles["ArtistCard__head"]}>
-          <FlexibleImg />
-          <Link to={url}>
-            <span className={styles["ArtistCard__head-content"]}>
-              <span className={styles["ArtistCard__avatar"]}>
-                <FlexibleImg />
-              </span>
-              <h3 className={styles["ArtistCard__name"]}>
-                {user.username}
-              </h3>
-              <span className={styles["ArtistCard__info"]}>
-                from {user.country}
-              </span>
-            </span>
-          </Link>
-      </div>
+      <ArtistHeader />
 
       <div className={styles["ArtistCard__body"]}>
         <div className={styles["ArtistCard__item"]}>

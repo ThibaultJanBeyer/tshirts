@@ -3,51 +3,6 @@
   width: 100%;
 }
 
-.ArtistCard__head {
-  cursor: pointer;
-  height: 25%;
-  margin-bottom: var(--gutter-s);
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.ArtistCard__head span {
-  display: block;
-}
-
-.ArtistCard__head:hover .ArtistCard__head-content,
-.ArtistCard__head:focus .ArtistCard__head-content {
-  box-shadow: inset 0 -30px 70px black;
-  transform: scale(1.05, 1.05);
-}
-
-.ArtistCard__head-content {
-  box-shadow: inset 0 -40px 90px black;
-  color: var(--color-white);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: box-shadow 250ms ease-in-out,
-              transform 250ms ease-in-out;
-  width: 100%;
-}
-
-.ArtistCard__info {
-  font-size: 0.7rem;
-}
-
-.ArtistCard__avatar {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  overflow: hidden;
-  border: 5px solid var(--color-white);
-  margin: var(--gutter-s) auto var(--gutter-xs) auto;
-}
-
 .ArtistCard__body {
   align-content: space-between;
   display: flex;

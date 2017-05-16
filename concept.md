@@ -16,14 +16,14 @@
 
 ## Design details page
 - [X] huge picture
-- sidebar:
-    - title
+- [X] sidebar:
+    - [X] title
     - love/share button
     - clothing type: male/female, t-shirt etc
-    - color
-    - size
-    - price
-    - shipping to + estimated arival dates
+    - [X] color
+    - [X] size
+    - [X] price
+    - [X] shipping to + estimated arival dates
 - designers profile:
     - icon, name
     - from location (maybe on map)

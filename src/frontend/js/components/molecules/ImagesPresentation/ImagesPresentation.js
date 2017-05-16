@@ -5,28 +5,52 @@ import { FlexibleImg } from 'components';
 
 import style from './ImagesPresentation.css';
 
-const ImagesPresentation = ({ images }) => {
-  const imgs = images.map(
-    (url, i) => (
-      <div key={i} className={style['ImagesPresentation__small-img']}>
-        <FlexibleImg />
+class ImagesPresentation extends React.Component {
+
+
+  render() {
+    const imgs = this.props.images.map(
+      (url, i) => (
+        <div key={i} 
+            className={style['ImagesPresentation__small-img']}
+            onClick={this.changeImg}>
+
+          <FlexibleImg source={url} />
+
+        </div>
+      )
+    );
+    return (
+      <div className={style['ImagesPresentation']}>
+        <div className={style['ImagesPresentation__small']}>
+          {imgs}
+        </div>
+        <div className={style['ImagesPresentation__large']}>
+          <FlexibleImg />
+        </div>
       </div>
-    )
-  );
-  return (
-    <div className={style['ImagesPresentation']}>
-      <div className={style['ImagesPresentation__small']}>
-        {imgs}
-      </div>
-      <div className={style['ImagesPresentation__large']}>
-        <FlexibleImg />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 ImagesPresentation.defaultProps = {
-  images: ["one", "two", "three"]
+  images: [
+    `https://unsplash.it/${
+      Math.floor(Math.random() * 500)
+      }/${
+      Math.floor(Math.random() * 500)
+    }/?random`,
+    `https://unsplash.it/${
+      Math.floor(Math.random() * 500)
+      }/${
+      Math.floor(Math.random() * 500)
+    }/?random`,
+    `https://unsplash.it/${
+      Math.floor(Math.random() * 500)
+      }/${
+      Math.floor(Math.random() * 500)
+      }/?random`
+  ]
 };
 
 ImagesPresentation.propTypes = {
