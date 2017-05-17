@@ -8,6 +8,7 @@ import{
   Header,
   ItemPresentation,
   MainMenu,
+  ProductDetails,
   ProductList,
   theme
 } from "components";
@@ -27,6 +28,11 @@ class ItemPage extends React.Component {
         <div className={theme["gutter"]}>
           <div className={`${theme["constrain"]}`}>
             <ProductList />
+          </div>
+        </div>
+        <div className={theme["gutter"]}>
+          <div className={`${theme["constrain"]}`}>
+            <ProductDetails />
           </div>
         </div>
       </GenericTemplate>
