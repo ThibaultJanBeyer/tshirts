@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  FlexibleImg,
+  ImageWithTitle,
   HorizontalList,
   theme
 } from 'components';
 
 import styles from './ProductList.css';
 
-const ProductList = ({ property }) => {
+const ProductList = () => {
   return (
     <div className={styles['ProductList']}>
       <h2 className={styles["ProductList__title"]}>
@@ -34,41 +34,21 @@ const ProductList = ({ property }) => {
       </ul>
       <HorizontalList>
         <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
+          <ImageWithTitle title="Product Name 1"
+                          linkUrl="/" />
         </div>
         <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
+          <ImageWithTitle title="Product Name 2"
+                          linkUrl="/" />
         </div>
         <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
-        </div>
-        <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
-        </div>
-        <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
-        </div>
-        <div className={styles["ProductList__product"]}>
-          <FlexibleImg />
-          <h3>Product Name</h3>
+          <ImageWithTitle title="Product Name 3"
+                          linkUrl="/" />
         </div>
       </HorizontalList>
 
     </div>
   );
-};
-
-ProductList.defaultProps = {
-  property: 'something'
-};
-
-ProductList.propTypes = {
-  property: PropTypes.string
 };
 
 export default ProductList;
