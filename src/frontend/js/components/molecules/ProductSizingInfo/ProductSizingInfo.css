@@ -1,0 +1,9 @@
+.ProductSizingInfo__img {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+
+.ProductSizingInfo__table {
+  display: inline-block;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  FlexibleImg
+  ProductSizingInfo
 } from 'components';
 
 import styles from './ProductDetails.css';
@@ -14,7 +14,9 @@ const ProductDetails = () => {
         Product Details
       </h2>
       <div>
-        <h3>Unisex T-Shirt</h3>
+        <h3 className={styles["ProductDetails__title"]}>
+          Unisex T-Shirt
+        </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, dignissimos?</p>
         <ul>
           <li>Feature 1</li>
@@ -24,17 +26,7 @@ const ProductDetails = () => {
           <li>Feature 5</li>
         </ul>
       </div>
-      <div>
-        <h3>Size Information</h3>
-        <div>
-          <FlexibleImg />
-        </div>
-        <table>
-          <tr>
-            <td>Something</td>
-          </tr>
-        </table>
-      </div>
+      <ProductSizingInfo />
 
     </div>
   );
