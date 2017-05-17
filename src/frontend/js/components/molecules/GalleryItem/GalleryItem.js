@@ -4,96 +4,64 @@ import { Link } from 'react-router-dom';
 
 import style from "./GalleryItem.css";
 import { 
-  FlexibleImg,
+  ImageWithTitle,
   seoFriendlyUrl,
   theme
 } from "components";
 
 // see http://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router
 const GalleryItem = ({ 
-  user,
-  level,
-  price,
-  title
-}) => {
+    item,
+    level,
+    price
+  }) => {
 
-  const safeTitle = seoFriendlyUrl(title);
-  const safeUsername = seoFriendlyUrl(user.username);
-
-  let heading;
-  if(level === 1) {
-    heading = (
-      <h1 className={style["GalleryItem__title"]}>
-        {title}
-      </h1>
-    );
-  } else if(level === 2) {
-    heading = (
-      <h2 className={style["GalleryItem__title"]}>
-          {title}
-      </h2>
-    );
-  } else if(level === 3) {
-    heading = (
-      <h3 className={style["GalleryItem__title"]}>
-          {title}
-      </h3>
-    );
-  } else if(level === 4) {
-    heading = (
-      <h4 className={style["GalleryItem__title"]}>
-          {title}
-      </h4>
-    );
-  }
+  const safeTitle = seoFriendlyUrl(item.title);
+  const safeUsername = seoFriendlyUrl(item.owner);
 
   return (
-    <div  className={style["GalleryItem"]}>
+    <ImageWithTitle title={item.title}
+                    linkUrl={`/shop/${safeUsername}/${safeTitle}`}
+                    imgAlt={item.title}
+                    imgUrl={item.mainImage}
+                    level={level}>
 
-      <div className={style["GalleryItem__head"]}>
-        <Link to={`/shop/${safeUsername}/${safeTitle}`}>
-          <FlexibleImg />
-        </Link>
-      </div>
-
-      <div className={style["GalleryItem__body"]}>
-        <Link to={`/shop/${safeUsername}/${safeTitle}`} className={theme.link}>
-          {heading}
-        </Link>
-        <div>
-          <div className={style["GalleryItem__author"]}>
-            by <Link to={safeUsername} className={theme.link}>
-              {user.username}
-            </Link>
-          </div>
-          <div className={style["GalleryItem__price"]}>
-            {price}
-          </div>
+        <div className={style["GalleryItem__author"]}>
+          by <Link to={safeUsername} className={theme.link}>
+            {item.owner}
+          </Link>
         </div>
-      </div>
+        <div className={style["GalleryItem__price"]}>
+          {price}
+        </div>
 
-    </div>
+    </ImageWithTitle>
   );
 };
 
 GalleryItem.defaultProps = {
-  user: {
-    username: "thibault-jan-beyer",
+  item: {
+    owner: "thibault-jan-beyer",
+    mainImage: `https://unsplash.it/${
+          Math.floor(Math.random() * 200)
+          }/${
+          Math.floor(Math.random() * 300)
+        }/?random`,
+    title: "Lorem Ipsum"
   },
   level: 2,
   price: `${
           Math.floor(Math.random() * 9999)
           },${
           Math.floor(Math.random() * 99)
-          }€`,
-  title: "Lorem Ipsum"
+          }€`
 };
 
 GalleryItem.propTypes = {
-  user: PropTypes.object,
+  item: PropTypes.object,
   level: PropTypes.number,
   price: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default GalleryItem;

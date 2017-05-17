@@ -1,0 +1,23 @@
+.ImageWithTitle {
+  height: 100%;
+  width: 100%;
+}
+
+.ImageWithTitle__head {
+  cursor: pointer;
+  height: 80%;
+  margin-bottom: var(--gutter-xs);
+  width: 100%;
+}
+
+.ImageWithTitle__head:hover img {
+  transform: scale(1.05, 1.05)
+}
+
+.ImageWithTitle__title {
+  display: block;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

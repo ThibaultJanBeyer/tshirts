@@ -1,27 +1,3 @@
-.GalleryItem {
-  height: 100%;
-  width: 100%;
-}
-
-.GalleryItem__head {
-  cursor: pointer;
-  height: 80%;
-  margin-bottom: var(--gutter-xs);
-  width: 100%;
-}
-
-.GalleryItem__head:hover img {
-  transform: scale(1.05, 1.05)
-}
-
-.GalleryItem__title {
-  display: block;
-  font-weight: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .GalleryItem__author {
   display: inline-block;
   font-size: 0.7rem;

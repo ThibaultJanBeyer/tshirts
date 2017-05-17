@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
@@ -14,6 +14,7 @@ const ImageWithTitle = ({
   imgUrl,
   imgAlt,
   title,
+  level,
   children
 }) => {
 
@@ -42,6 +43,12 @@ const ImageWithTitle = ({
           {title}
       </h4>
     );
+  } else if(level === 0) {
+    heading = (
+      <p className={style["ImageWithTitle__title"]}>
+          {title}
+      </p>
+    );
   }
 
   return (
@@ -66,19 +73,18 @@ const ImageWithTitle = ({
   );
 };
 
-GalleryItem.defaultProps = {
-  linkUrl,
-  imgUrl,
-  imgAlt,
-  title
+ImageWithTitle.defaultProps = {
+  level: 0,
+  linkUrl: "/"
 };
 
-GalleryItem.propTypes = {
-  linkUrl,
-  imgUrl,
-  imgAlt,
-  title,
-  children
+ImageWithTitle.propTypes = {
+  children: PropTypes.node,
+  imgAlt: PropTypes.string,
+  imgUrl: PropTypes.string,
+  level: PropTypes.number,
+  linkUrl: PropTypes.string.isRequired,
+  title: PropTypes.string
 };
 
-export default GalleryItem;*/
+export default ImageWithTitle;
