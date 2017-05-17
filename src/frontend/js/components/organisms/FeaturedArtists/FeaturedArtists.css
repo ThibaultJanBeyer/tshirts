@@ -3,32 +3,6 @@
   margin-bottom: var(--gutter-s);
 }
 
-.FeaturedArtists__container {
-	background:
-		/* Shadow covers */
-		linear-gradient(to left, var(--color-white) 100%, transparent),
-		linear-gradient(to right, transparent, var(--color-white) 100%) 0 100%,
-		
-		/* Shadows */
-		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.3), transparent),
-		radial-gradient(farthest-side at 50% 50%, rgba(0,0,0,.3), transparent) 0 100%;
-
-  background-position: left center, right center, -5% 50%, 105% 50%;
-	background-repeat: no-repeat;
-	background-color: var(--color-white);
-	background-size: 20px 100%, 20px 100%, 6% 100%, 6% 100%;
-
-	/* Opera doesn't support this in the shorthand */
-	background-attachment: local, local, scroll, scroll;
-
-  overflow: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  width: 100%;
-
-  padding-bottom: var(--gutter);
-}
-
 .FeaturedArtists__card {
   display: inline-block;
   height: 520px;

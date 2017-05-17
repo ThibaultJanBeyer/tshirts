@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import {
   ArtistCard,
   Button,
+  HorizontalList,
   theme
 } from "components";
 
@@ -17,7 +18,7 @@ const FeaturedArtists = ({ title }) => {
   return (
     <div className={`${theme["constrain"]} ${styles["FeaturedArtists"]}`}>
       {titleNode}
-      <div className={styles["FeaturedArtists__container"]}>
+      <HorizontalList>
         <div className={styles["FeaturedArtists__card"]}>
           <ArtistCard />
         </div>
@@ -36,7 +37,7 @@ const FeaturedArtists = ({ title }) => {
         <div className={`${styles["FeaturedArtists__card"]} ${styles["FeaturedArtists__card--you"]}`}>
           <Button content="You? Start selling now!" primary />
         </div>
-      </div>
+      </HorizontalList>
     </div>
   );
 };
