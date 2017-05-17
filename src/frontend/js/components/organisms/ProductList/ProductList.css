@@ -1,0 +1,35 @@
+.ProductList__title {
+  margin-bottom: var(--gutter);
+}
+
+.ProductList__linklist {
+  margin-bottom: var(--gutter-xs);
+}
+
+.ProductList__link {
+  display: inline-block;
+  margin-right: var(--gutter);
+}
+
+.ProductList__link::after {
+  content: "▼";
+  display: inline-block;
+  font-size: 0.5rem;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.ProductList__product {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  margin-right: var(--gutter);
+}
+
+.ProductList__product-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}

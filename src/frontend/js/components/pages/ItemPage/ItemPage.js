@@ -8,6 +8,7 @@ import{
   Header,
   ItemPresentation,
   MainMenu,
+  ProductList,
   theme
 } from "components";
 
@@ -23,13 +24,18 @@ class ItemPage extends React.Component {
             <ItemPresentation />
           </div>
         </div>
+        <div className={theme["gutter"]}>
+          <div className={`${theme["constrain"]}`}>
+            <ProductList />
+          </div>
+        </div>
       </GenericTemplate>
     );
   }
 }
 
-ItemPage.propTypes = {
-  match: PropTypes.object.isRequired
-};
+// ItemPage.propTypes = {
+//   match: PropTypes.object.isRequired
+// };
 
 export default ItemPage;
