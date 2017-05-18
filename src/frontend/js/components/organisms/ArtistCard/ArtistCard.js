@@ -19,7 +19,9 @@ const ArtistCard = ({ user }) => {
   return (
     <div className={styles["ArtistCard"]}>
 
-      <ArtistHeader />
+      <div className={styles["ArtistCard__head"]}>
+        <ArtistHeader />
+      </div>
 
       <div className={styles["ArtistCard__body"]}>
         <div className={styles["ArtistCard__item"]}>

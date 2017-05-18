@@ -17,14 +17,16 @@ const ArtistHeader = ({ user }) => {
         <FlexibleImg />
         <Link to={url} className={style["ArtistHeader__link"]}>
           <span className={style["ArtistHeader__container"]}>
-            <span className={style["ArtistHeader__avatar"]}>
-              <FlexibleImg />
-            </span>
-            <h3 className={style["ArtistHeader__name"]}>
-              {user.username}
-            </h3>
-            <span className={style["ArtistHeader__info"]}>
-              from {user.country}
+            <span style={{display: "block"}}>
+              <span className={style["ArtistHeader__avatar"]}>
+                <FlexibleImg />
+              </span>
+              <h3 className={style["ArtistHeader__name"]}>
+                {user.username}
+              </h3>
+              <span className={style["ArtistHeader__info"]}>
+                from {user.country}
+              </span>
             </span>
           </span>
         </Link>
@@ -34,7 +36,7 @@ const ArtistHeader = ({ user }) => {
 
 ArtistHeader.defaultProps = {
   user: {
-    username: "thibault-jan-beyer",
+    username: "sample-user",
     city: "Berlin",
     country: "Germany"
   }

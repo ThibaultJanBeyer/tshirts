@@ -1,7 +1,3 @@
-.ProductDetails {
-  
-}
-
 .ProductDetails__title {
   margin-bottom: var(--gutter-s);
 }
@@ -10,16 +6,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .ProductDetails__info {
   margin-bottom: var(--gutter);
   margin-right: var(--gutter);
-  width: calc(40% - var(--gutter));
+  min-width: 400px;
+  width: 35%;
 }
 
 .ProductDetails__sizing {
   margin-bottom: var(--gutter);
   min-width: 400px;
-  width: 60%;
+  width: 55%;
 }

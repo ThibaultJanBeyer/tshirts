@@ -6,6 +6,7 @@ import{
   Footer,
   GenericTemplate,
   Header,
+  ItemDetails,
   ItemPresentation,
   MainMenu,
   ProductDetails,
@@ -28,6 +29,11 @@ class ItemPage extends React.Component {
         <div className={theme["gutter"]}>
           <div className={`${theme["constrain"]}`}>
             <ProductList />
+          </div>
+        </div>
+        <div className={theme["gutter"]}>
+          <div className={`${theme["constrain"]}`}>
+            <ItemDetails />
           </div>
         </div>
         <div className={theme["gutter"]}>

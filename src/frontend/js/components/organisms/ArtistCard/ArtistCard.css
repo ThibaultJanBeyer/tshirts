@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+.ArtistCard__head {
+  height: 25%;
+  margin-bottom: var(--gutter-s);
+  width: 100%;
+}
+
 .ArtistCard__body {
   align-content: space-between;
   display: flex;
