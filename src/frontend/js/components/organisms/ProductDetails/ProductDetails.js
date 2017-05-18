@@ -31,6 +31,9 @@ const ProductDetails = () => {
           <ProductSizingInfo />
         </div>
       </div>
+      <div className={styles["ProductDetails__tags"]}>
+        lorem | lorem | lorem | lorem | lorem
+      </div>
     </div>
   );
 };
