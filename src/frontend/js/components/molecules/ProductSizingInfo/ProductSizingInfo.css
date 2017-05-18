@@ -1,9 +1,23 @@
+.ProductSizingInfo__title {
+  margin-bottom: var(--gutter-s);
+}
+
 .ProductSizingInfo__img {
   display: inline-block;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  margin-bottom: var(--gutter-s);
+  margin-right: var(--gutter-s);
+  vertical-align: top;
+  width: 100px;
+}
+
+@media screen and (max-width: 830px) {
+  .ProductSizingInfo__img {
+    display: none;
+  }
 }
 
 .ProductSizingInfo__table {
   display: inline-block;
+  vertical-align: top;
 }

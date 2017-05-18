@@ -6,7 +6,20 @@
   margin-bottom: var(--gutter-s);
 }
 
-.ProductDetails__sizes {
-  display: inline-block;
-  width: 45%;
+.ProductDetails__infos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.ProductDetails__info {
+  margin-bottom: var(--gutter);
+  margin-right: var(--gutter);
+  width: calc(40% - var(--gutter));
+}
+
+.ProductDetails__sizing {
+  margin-bottom: var(--gutter);
+  min-width: 400px;
+  width: 60%;
 }

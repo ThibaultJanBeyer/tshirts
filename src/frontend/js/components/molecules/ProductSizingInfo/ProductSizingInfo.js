@@ -13,40 +13,40 @@ const ProductSizingInfo = () => {
       <h3 className={styles["ProductSizingInfo__title"]}>
         Size Information
       </h3>
-      <div className={styles["ProductSizingInfo__sizes"]}>
+      <div>
         <div className={styles["ProductSizingInfo__img"]}>
           <FlexibleImg />
         </div>
         <table className={styles["ProductSizingInfo__table"]}>
           <thead>
-            <tr className={styles["ProductSizingInfo__row--header"]}>
-              <th className={styles["ProductSizingInfo__cell--header"]}></th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>S</th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>M</th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>L</th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>XL</th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>2XL</th>
-              <th className={styles["ProductSizingInfo__cell--header"]}>3XL</th>
+            <tr>
+              <th/>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+              <th>2XL</th>
+              <th>3XL</th>
             </tr>
           </thead>
           <tbody>
-            <tr className={styles["ProductSizingInfo__row"]}>
-              <th className={styles["ProductSizingInfo__cell--head"]}>Chest</th>
-              <td className={styles["ProductSizingInfo__cell"]}>92cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>102cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>112cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>122cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>132cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>142cm</td>
+            <tr>
+              <th>Chest</th>
+              <td>92cm</td>
+              <td>102cm</td>
+              <td>112cm</td>
+              <td>122cm</td>
+              <td>132cm</td>
+              <td>142cm</td>
             </tr>
-            <tr className={styles["ProductSizingInfo__row"]}>
-              <th className={styles["ProductSizingInfo__cell--head"]}>Length</th>
-              <td className={styles["ProductSizingInfo__cell"]}>71cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>74cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>76cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>79cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>81cm</td>
-              <td className={styles["ProductSizingInfo__cell"]}>84cm</td>
+            <tr>
+              <th>Length</th>
+              <td>71cm</td>
+              <td>74cm</td>
+              <td>76cm</td>
+              <td>79cm</td>
+              <td>81cm</td>
+              <td>84cm</td>
             </tr>
           </tbody>
         </table>
