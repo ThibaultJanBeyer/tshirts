@@ -3,28 +3,45 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import queryString from 'query-string';
 
-// import {
-//   Button
-// } from 'components';
+import {
+  FlexibleImg
+} from 'components';
 
-import style from './ItemDetails.css';
+import styles from './ItemDetails.css';
 
 const ItemDetails = ({ item }) => {
 
   return (
     <div>
-      <h2>Details</h2>
-      <div>
-        <h3>Designer</h3>
-      </div>
-      <div>
-        <h3>Item</h3>
-        <p>
-          {item.title}
-        </p>
-        <p>
-          {item.description}
-        </p>
+      <h2 className={styles["ItemDetails__title"]}>
+        Details
+      </h2>
+      <div className={styles["ItemDetails__container"]}>
+        <div className={styles["ItemDetails__designer"]}>
+          <h3 className={styles["ItemDetails__title"]}>
+            Designer
+          </h3>
+          <div>
+            <div className={styles["ItemDetails__avatar"]}>
+              <FlexibleImg />
+            </div>
+            <div className={styles["ItemDetails__info"]}>
+              <p>Name • location</p>
+              <p>bio</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles["ItemDetails__item"]}>
+          <h3 className={styles["ItemDetails__title"]}>
+            Item
+          </h3>
+          <p>
+            {item.title}
+          </p>
+          <p>
+            {item.description}
+          </p>
+        </div>
       </div>
     </div>
   );
