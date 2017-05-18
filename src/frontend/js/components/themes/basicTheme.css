@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,300');
 
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+/**
+ * Variables
+ */
+
 :root {
   --color-primary: royalblue;
   --color-primary-rgbval: 65, 105, 225;
@@ -18,12 +29,9 @@
   --gutter-xl: 40px;
 }
 
-body {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.3;
-}
+/**
+ * Headings
+ */
 
 h1, h2, h3, h4, h5, legend {
   font-weight: 100;
@@ -44,6 +52,29 @@ h3 {
 h4, legend {
   font-size: 0.9rem;
 }
+
+/**
+ * Tables
+ */
+
+th, td {
+  padding: 5px;
+}
+
+th:nth-child(2n),
+td:nth-child(2n),
+tbody tr:nth-child(odd) {
+  background-color: var(--color-subtlegrey);
+}
+
+tbody tr:nth-child(odd) td:nth-child(2n) {
+  background-color: var(--color-subtlegrey);
+  filter: brightness(95%);
+}
+
+/**
+ * Commons
+ */
 
 .gutter {
   margin-bottom: var(--gutter-xl);
