@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 
 import styles from "./Logo.css";
 
@@ -8,9 +9,9 @@ const Logo = ({content, viewBox, png, src, alt}) => {
 
   return (
     <div className={styles["Logo"]}>
-      <div className={styles["Logo-container"]}>
+      <Link to={"/"} className={styles["Logo-container"]}>
         {content}
-      </div>
+      </Link>
     </div>
   );
 };
