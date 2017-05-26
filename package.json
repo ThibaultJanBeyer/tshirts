@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "frontend": "webpack-dev-server --content-base src/frontend --inline --hot",
+    "frontend": "webpack-dev-server --content-base src --inline --hot",
     "start": "npm-run-all --parallel frontend lint:watch",
     "lint": "node_modules/.bin/esw webpack.config.* src server",
     "lint:watch": "npm run lint -- --watch",

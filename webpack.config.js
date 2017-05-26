@@ -4,7 +4,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  context: __dirname + "/src/frontend",
+  context: __dirname + "/src",
   devtool: debug ? "inline-sourcemap" : false,
   entry: "./js/app.js",
   devServer: {
@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve: {
     modules: [
-      path.resolve(__dirname + '/src/frontend/js/'),
+      path.resolve(__dirname + '/src/js/'),
       path.resolve(__dirname + '/node_modules')
     ]
   },
@@ -37,7 +37,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/src/frontend/static",
+    path: __dirname + "/src/static",
     filename: "app.min.js"
   },
   plugins: debug ? [
