@@ -1,5 +1,5 @@
 const authController = require('./controllers/auth'),
-      usersController = require('./controllers/users')
+      usersController = require('./controllers/users'),
       express = require('express'),
       passportService = require('./config/passport'),
       passport = require('passport');

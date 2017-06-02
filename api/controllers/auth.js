@@ -31,7 +31,7 @@ exports.login = function(req, res, next) {
     token: 'JWT ' + generateToken(userInfo),
     user: userInfo
   });
-}
+};
 
 
 //========================================

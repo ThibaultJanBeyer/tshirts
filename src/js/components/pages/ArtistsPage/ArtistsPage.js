@@ -33,9 +33,9 @@ class ArtistsPage extends React.Component {
     console.log(UserStore.users);
     const Emails = [];
     UserStore.users.forEach(e => {
-      console.log(e.email)
+      console.log(e.email);
       Emails.push(<div>{e.email}</div>);
-    })
+    });
     console.log(Emails);
     return (
       <GenericTemplate  title="ArtistsPage!"

@@ -1,4 +1,4 @@
-User = require('../models/user');
+const User = require('../models/user');
 
 exports.getAll = function(req, res, next) {
     console.log(req.user);
@@ -13,10 +13,10 @@ exports.getAll = function(req, res, next) {
         if (err) return next(err);
         res.status(201).json(users);
     });
-}
+};
 
 exports.get = function(req, res, next) {
     return User.find({email: req.params.id}, function(err, user) {
         res.status(201).json(user);
     });
-}
+};
