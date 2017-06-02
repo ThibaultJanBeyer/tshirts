@@ -4,22 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm-update",
+    "start": "npm-run-all --parallel frontend lint:watch db api",
+
     "frontend": "webpack-dev-server --content-base src --inline --hot",
     "api": "nodemon --exec babel-node api/index.js localhost 3000",
-    "prestart": "npm update",
-    "start": "npm-run-all --parallel frontend lint:watch db api",
+    "db": "mongod --dbpath=db --port 27017 --auth",
+
+    "server": "babel-node server.js",
+
     "lint": "node_modules/.bin/esw webpack.config.* src server",
     "lint:watch": "npm run lint -- --watch",
-    "db": "mongod --dbpath=db --port 27017 --auth",
     
     "test": "jest",
     "coverage": "npm test -- --coverage",
-    "build:clean": "rimraf \"dist/!(.git*|Procfile)**\"",
-    "build:copy": "copyfiles -u 1 public/* public/**/* dist",
+
     "prebuild": "npm run build:clean && npm run build:copy",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config",
-    "server": "babel-node server.js",
-    "seed": "mongoimport --db users --collection contacts --file contacts.json"
+    "build:clean": "rimraf \"dist/!(.git*|Procfile)**\"",
+    "build:copy": "copyfiles -u 1 public/* public/**/* dist",
+
+    "seed": "mongoimport --db shirts --collection users --file db/seeds/users.json"
   },
   "keywords": [],
   "author": "",
