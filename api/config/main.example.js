@@ -1,10 +1,17 @@
+/**
+ * This is an example file.
+ * please make a copy, replace values with real project values
+ * and save then remove the .example from filename.
+ * Thanks you.
+ */
+
 module.exports = {  
   // Secret key for JWT signing and encryption
   'secret': 'super secret passphrase',
   // Database connection information
-  'database': 'mongodb://root:root@localhost:27017/shirts',
+  'database': 'mongodb://[username]:[password]@localhost:27017/shirts',
   // Setting port for server
-  'port': process.env.PORT || 3000
+  'port': 3000
 };
 
 /*
