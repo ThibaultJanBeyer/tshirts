@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { 
+import {
+  ArtistsPage,
   ItemPage,
   HomePage,
   NotFound,
@@ -17,17 +18,22 @@ const Routes = () => {
           <HomePage />
         </ScrollToTop>
       </Route>
-      <Route path="/shop/search/:query">
+      <Route exact path="/artists">
+        <ScrollToTop>
+          <ArtistsPage />
+        </ScrollToTop>
+      </Route>
+      <Route exact path="/shop/search/:query">
         <ScrollToTop>
           <ShopPage />
         </ScrollToTop>
       </Route>
-      <Route path="/shop/:username/:itemId">
+      <Route exact path="/shop/:username/:itemId">
         <ScrollToTop>
           <ItemPage />
         </ScrollToTop>
       </Route>
-      <Route path="/shop">
+      <Route exact path="/shop">
         <ScrollToTop>
           <ShopPage />
         </ScrollToTop>
