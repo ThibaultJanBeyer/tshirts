@@ -1,8 +1,11 @@
+# the main config file should be kept secret
+# see api/config/main.example.js for more information 
 **/config/main.js
+
+#sys
 .DS_Store
 
 # mongodb
-
 db
 
 # Logs
