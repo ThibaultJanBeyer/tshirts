@@ -15,7 +15,9 @@ module.exports = {
 };
 
 /*
+
 To get a user auth in mongodb following steps:
+
 1. run mongod:
 $ mongod --dbpath=db --port 27017
 2. Now connect to it and create user:
@@ -27,4 +29,11 @@ $ mongo --post 27017
 $ mongod --dbpath=db --port 27017 --auth
 4. Connect to it like this:
 'mongodb://root:root@localhost:27017/shirts'
+
+
+To kill a running mongodb instance:
+
+1. Find out the ID https://stackoverflow.com/questions/5091624/is-mongodb-running
+2. kill it: $ kill [ID]
+
 */

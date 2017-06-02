@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm-update",
+    "prestart": "npm update",
     "start": "npm-run-all --parallel frontend lint:watch db api",
 
     "frontend": "webpack-dev-server --content-base src --inline --hot",

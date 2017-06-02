@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "0",
+    "email": "hi@thibaultjanbeyer.com",
+    "role": "Owner",
+    "profile": {
+      "firstName": "Thibault Jan",
+      "lastName": "Beyer"
+    }
+  },
+  {
+    "_id": "1",
+    "email": "admin@admin.com",
+    "role": "Admin",
+    "profile": {
+      "firstName": "Admin",
+      "lastName": "Admin"
+    }
+  },
+  {
+    "_id": "2",
+    "email": "author@author.com",
+    "role": "Author",
+    "profile": {
+      "firstName": "Admin",
+      "lastName": "Admin"
+    }
+  },
+  {
+    "_id": "3",
+    "email": "eduardo.monero@gmail.com",
+    "role": "Member",
+    "profile": {
+      "firstName": "Eduardo",
+      "lastName": "Monero"
+    }
+  }
+]

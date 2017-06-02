@@ -6,7 +6,8 @@
 .DS_Store
 
 # mongodb
-db
+db/*
+!db/seeds
 
 # Logs
 logs
