@@ -18,6 +18,7 @@ body {
   --color-grey: lightgrey;
   --color-subtlegrey: #f3f3f3;
   --color-white: #fcfcfc;
+  --color-black: black;
 
   --gradient-primary: linear-gradient(to bottom right, aqua 0%, royalblue 100%);
   --gradient-grey: linear-gradient(to bottom right, lightgrey 0%, darkgray 100%);

@@ -15,7 +15,7 @@
 
     "lint": "node_modules/.bin/esw webpack.config.* src server",
     "lint:watch": "npm run lint -- --watch",
-    
+
     "test": "jest",
     "coverage": "npm test -- --coverage",
 

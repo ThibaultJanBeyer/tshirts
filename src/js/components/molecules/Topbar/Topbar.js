@@ -7,7 +7,7 @@ const Topbar = () => {
   return (
     <div className={styles["Topbar"]}>
       <a className={theme.link}>Sell your Art</a>
-      <a className={theme.link}>Login</a>
+      <button className={theme.link} data-a11y-dialog-show="Dialog">Login</button>
     </div>
   );
 };
