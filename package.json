@@ -24,7 +24,9 @@
     "build:clean": "rimraf \"dist/!(.git*|Procfile)**\"",
     "build:copy": "copyfiles -u 1 public/* public/**/* dist",
 
-    "seed": "mongoimport --db shirts --collection users --file db/seeds/users.json"
+    "seed": "npm-run-all clear:users seed:users",
+    "clear:users": "mongo shirts -u root -p root --eval='db.users.remove({});'",
+    "seed:users": "mongoimport --db=shirts -u=root -p=root --collection users --file=db/seeds/users.json --jsonArray"
   },
   "keywords": [],
   "author": "",
