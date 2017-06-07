@@ -16,12 +16,13 @@ module.exports = {
 
 /*
 
-To get a user auth in mongodb following steps:
+MAKE SURE To get a user auth in mongodb: following steps:
+(caution: this will differ in production)
 
 1. run mongod:
 $ mongod --dbpath=db --port 27017
 2. Now connect to it and create user:
-$ mongo --post 27017
+$ mongo --port 27017
 > use shirts
 > db.createUser( { user: "root", pwd: "root", roles: [ { role: "root", db: "admin" } ] } );
 > exit
