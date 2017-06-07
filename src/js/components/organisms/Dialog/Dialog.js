@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import queryString from 'query-string';
+import { withRouter } from 'react-router-dom';
 
 import {
   A11yDialog
@@ -9,6 +11,14 @@ import {
 import styles from "./Dialog.css";
 
 class Dialog extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const { dialog } = queryString.parse(location.search);
+
+    this.state = {};
+  }
+
   componentDidMount() {
     // setup the dialog
     const dialog = new A11yDialog(document.getElementById('Dialog'));
