@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { observer } from "mobx-react";
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import UserStore from "store/UserStore";
+import userStore from "store/UserStore";
 
 import {
   Footer,
@@ -25,14 +25,14 @@ class ArtistsPage extends React.Component {
 
   componentDidMount() {
     const self = this;
-    UserStore.refresh();
+    userStore.refresh();
     console.log("xo");
   }
 
   render() {
-    console.log(UserStore.users);
+    console.log(userStore.users);
     const Emails = [];
-    UserStore.users.forEach(e => {
+    userStore.users.forEach(e => {
       console.log(e.email);
       Emails.push(<div>{e.email}</div>);
     });

@@ -1,0 +1,41 @@
+.InputEmail {
+  display: block;
+  position: relative;
+}
+
+.InputEmail__message {
+  color: var(--color-alert);
+  font-size: var(--font-size-s);
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.InputEmail--valid::after,
+.InputEmail--invalid::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+/* Valid */
+
+.InputEmail--valid::after {
+  content: '✔';
+  color: var(--color-success);
+}
+
+.InputEmail--valid input {
+  border: 1px solid var(--color-success);
+}
+
+/* Invalid */
+
+.InputEmail--invalid::after {
+  content: '✖';
+  color: var(--color-alert);
+}
+
+.InputEmail--invalid input {
+  border: 1px solid var(--color-alert);
+}

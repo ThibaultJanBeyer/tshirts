@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import queryString from 'query-string';
-import { withRouter } from 'react-router-dom';
 
 import {
-  A11yDialog
+  A11yDialog,
+  InputEmail
 } from "components";
 
 import styles from "./Dialog.css";
@@ -17,6 +17,7 @@ class Dialog extends React.Component {
     const { dialog } = queryString.parse(location.search);
 
     this.state = {};
+    this.handleMailChange = this.handleMailChange.bind(this);
   }
 
   componentDidMount() {
@@ -27,6 +28,10 @@ class Dialog extends React.Component {
   componentDidUpdate() {
     // setup the dialog
     const dialog = new A11yDialog(document.getElementById('Dialog'));
+  }
+
+  handleMailChange(e) {
+    console.log(e);
   }
 
   render() {
@@ -45,10 +50,11 @@ class Dialog extends React.Component {
 
             <form>
               <h3>Login / Register</h3>
-              <label htmlFor="email">Email:</label>
-              <input name="email" type="text"/>
-              <label htmlFor="password">Password:</label>
-              <input password="password" type="password"/>
+              <InputEmail onChange={this.handleMailChange}/>
+              <label>
+                Password:
+                <input name="password" type="password"/>
+              </label>
               <input type="submit"/>
             </form>
           </div>

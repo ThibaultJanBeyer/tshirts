@@ -19,6 +19,8 @@ body {
   --color-subtlegrey: #f3f3f3;
   --color-white: #fcfcfc;
   --color-black: black;
+  --color-alert: red;
+  --color-success: greenyellow;
 
   --gradient-primary: linear-gradient(to bottom right, aqua 0%, royalblue 100%);
   --gradient-grey: linear-gradient(to bottom right, lightgrey 0%, darkgray 100%);
@@ -28,6 +30,8 @@ body {
   --gutter: 15px;
   --gutter-l: 30px;
   --gutter-xl: 40px;
+
+  --font-size-s: 0.8rem;
 }
 
 /**
@@ -86,7 +90,7 @@ tbody tr:nth-child(odd) td:nth-child(2n) {
 }
 
 .input {
-  border-radius: 15px;
+  /*border-radius: 15px;*/
   border: 1px solid lightgrey;
   box-sizing: border-box;
   height: 100%;
